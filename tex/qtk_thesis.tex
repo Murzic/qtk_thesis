@@ -1,0 +1,25 @@
+\documentclass[12pt,a4paper,titlepage]{article}
+\usepackage{License_style}
+
+\begin{document}
+
+\numberwithin{lstlisting}{section}
+
+\setcounter{page}{4}
+
+\tableofcontents
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\cleardoublepage
+
+% Introduction
+% \phantomsection
+\addcontentsline{toc}{section}{Introduction}
+\input{introduction.tex}
+\cleardoublepage
+
+% Chapter 1
+\input{chapter_1.tex}
+\cleardoublepage
+
+
+\end{document}
