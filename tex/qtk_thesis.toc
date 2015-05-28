@@ -1,6 +1,19 @@
 \thispagestyle {empty}
 \contentsline {section}{Introduction}{5}
-\contentsline {section}{\numberline {1}Domain Analysis}{8}
-\contentsline {subsection}{\numberline {1.1}Quick Response Codes}{8}
-\contentsline {subsubsection}{\numberline {1.1.1}QR Error Correction}{8}
-\contentsline {subsubsection}{\numberline {1.1.2}QR code sizes}{8}
+\contentsline {section}{\numberline {1}Domain Analysis}{7}
+\contentsline {subsection}{\numberline {1.1}Quick Response Codes}{7}
+\contentsline {subsubsection}{\numberline {1.1.1}QR Error Correction}{7}
+\contentsline {subsubsection}{\numberline {1.1.2}QR code sizes}{7}
+\contentsline {section}{\numberline {2}System Design}{9}
+\contentsline {subsection}{\numberline {2.1}Domain Model}{9}
+\contentsline {subsubsection}{\numberline {2.1.1}Use Case Actors}{9}
+\contentsline {subsubsection}{\numberline {2.1.2}Use Cases}{9}
+\contentsline {section}{\numberline {3}Economic Analysis}{13}
+\contentsline {subsection}{\numberline {3.1}Project Description}{13}
+\contentsline {subsection}{\numberline {3.2}SWOT Analysis}{14}
+\contentsline {subsection}{\numberline {3.3}Project time schedule}{14}
+\contentsline {subsubsection}{\numberline {3.3.1}Objectives}{14}
+\contentsline {subsubsection}{\numberline {3.3.2}Schedule}{15}
+\contentsline {subsection}{\numberline {3.4}Economical proof}{17}
+\contentsline {subsubsection}{\numberline {3.4.1}Tangible and intangible expenses}{17}
+\contentsline {subsubsection}{\numberline {3.4.2}Salary expenses}{17}

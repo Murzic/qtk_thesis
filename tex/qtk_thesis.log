@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.5.22)  22 MAY 2015 14:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.22)  28 MAY 2015 11:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -143,7 +143,7 @@ Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is not detected.
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
@@ -177,10 +177,18 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: dvips.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvips.def
-File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count104
 ))
 \Gin@req@height=\dimen125
 \Gin@req@width=\dimen126
@@ -204,41 +212,41 @@ Package caption Info: We need package `newfloat' on input line 293.
 (/usr/share/texlive/texmf-dist/tex/latex/caption/newfloat.sty
 Package: newfloat 2013/05/11 v1.1-91 Defining new floating environments (AR)
 )
-\c@ContinuedFloat=\count104
+\c@ContinuedFloat=\count105
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/layout.sty
 Package: layout 2000/09/25 v1.2c Show layout parameters
-\oneinch=\count105
-\cnt@paperwidth=\count106
-\cnt@paperheight=\count107
-\cnt@hoffset=\count108
-\cnt@voffset=\count109
-\cnt@textheight=\count110
-\cnt@textwidth=\count111
-\cnt@topmargin=\count112
-\cnt@oddsidemargin=\count113
-\cnt@evensidemargin=\count114
-\cnt@headheight=\count115
-\cnt@headsep=\count116
-\cnt@marginparsep=\count117
-\cnt@marginparwidth=\count118
-\cnt@marginparpush=\count119
-\cnt@footskip=\count120
-\fheight=\count121
-\ref@top=\count122
-\ref@hoffset=\count123
-\ref@voffset=\count124
-\ref@head=\count125
-\ref@body=\count126
-\ref@foot=\count127
-\ref@margin=\count128
-\ref@marginwidth=\count129
-\ref@marginpar=\count130
-\Interval=\count131
-\ExtraYPos=\count132
-\PositionX=\count133
-\PositionY=\count134
-\ArrowLength=\count135
+\oneinch=\count106
+\cnt@paperwidth=\count107
+\cnt@paperheight=\count108
+\cnt@hoffset=\count109
+\cnt@voffset=\count110
+\cnt@textheight=\count111
+\cnt@textwidth=\count112
+\cnt@topmargin=\count113
+\cnt@oddsidemargin=\count114
+\cnt@evensidemargin=\count115
+\cnt@headheight=\count116
+\cnt@headsep=\count117
+\cnt@marginparsep=\count118
+\cnt@marginparwidth=\count119
+\cnt@marginparpush=\count120
+\cnt@footskip=\count121
+\fheight=\count122
+\ref@top=\count123
+\ref@hoffset=\count124
+\ref@voffset=\count125
+\ref@head=\count126
+\ref@body=\count127
+\ref@foot=\count128
+\ref@margin=\count129
+\ref@marginwidth=\count130
+\ref@marginpar=\count131
+\Interval=\count132
+\ExtraYPos=\count133
+\PositionX=\count134
+\PositionY=\count135
+\ArrowLength=\count136
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip79
@@ -265,7 +273,7 @@ Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-global.def
 File: uni-global.def 2013/05/13 UCS: Unicode global data
 )
-\uc@secondtry=\count136
+\uc@secondtry=\count137
 \uc@combtoks=\toks24
 \uc@combtoksb=\toks25
 \uc@temptokena=\toks26
@@ -279,18 +287,12 @@ Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)))
+))
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
@@ -315,25 +317,31 @@ Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
+Package pdftexcmds Info: \pdfdraftmode found.
 )
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
 
-Package epstopdf Warning: Drivers other than `pdftex.def' are not supported.
-
-)) (/usr/share/texlive/texmf-dist/tex/latex/pbox/pbox.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/pbox/pbox.sty
 Package: pbox 2011/12/07 v1.2 Dynamic parboxes
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count137
-\calc@Bcount=\count138
+\calc@Acount=\count138
+\calc@Bcount=\count139
 \calc@Adimen=\dimen135
 \calc@Bdimen=\dimen136
 \calc@Askip=\skip88
 \calc@Bskip=\skip89
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count139
+\calc@Ccount=\count140
 \calc@Cskip=\skip90
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
@@ -346,7 +354,7 @@ Package: mwe 2012/05/15 v0.3 Package to support minimal working examples (MWE)
 
 (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2011/04/14 v1.2 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count140
+\c@lips@count=\count141
 )
 (/usr/share/texlive/texmf-dist/tex/latex/blindtext/blindtext.sty
 Package: blindtext 2012/01/06 V2.0 blindtext-Package
@@ -354,36 +362,36 @@ Package: blindtext 2012/01/06 V2.0 blindtext-Package
 (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count141
-\c@Blindtext=\count142
-\c@blind@countparstart=\count143
-\blind@countxx=\count144
-\blindtext@numBlindtext=\count145
-\blind@countyy=\count146
-\c@blindlist=\count147
-\c@blindlistlevel=\count148
-\c@blindlist@level=\count149
-\blind@listitem=\count150
-\c@blind@listcount=\count151
-\c@blind@levelcount=\count152
-\blind@mathformula=\count153
-\blind@Mathformula=\count154
-\c@blind@randomcount=\count155
-\c@blind@randommax=\count156
-\c@blind@pangramcount=\count157
-\c@blind@pangrammax=\count158
+\c@blindtext=\count142
+\c@Blindtext=\count143
+\c@blind@countparstart=\count144
+\blind@countxx=\count145
+\blindtext@numBlindtext=\count146
+\blind@countyy=\count147
+\c@blindlist=\count148
+\c@blindlistlevel=\count149
+\c@blindlist@level=\count150
+\blind@listitem=\count151
+\c@blind@listcount=\count152
+\c@blind@levelcount=\count153
+\blind@mathformula=\count154
+\blind@Mathformula=\count155
+\c@blind@randomcount=\count156
+\c@blind@randommax=\count157
+\c@blind@pangramcount=\count158
+\c@blind@pangrammax=\count159
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
-\c@KVtest=\count159
+\c@KVtest=\count160
 \sf@farskip=\skip92
 \sf@captopadj=\dimen137
 \sf@capskip=\skip93
 \sf@nearskip=\skip94
-\c@subfigure=\count160
-\c@subfigure@save=\count161
-\c@subtable=\count162
-\c@subtable@save=\count163
+\c@subfigure=\count161
+\c@subfigure@save=\count162
+\c@subtable=\count163
+\c@subtable@save=\count164
 \sf@top=\skip95
 \sf@bottom=\skip96
 )
@@ -393,7 +401,7 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@outerparindent=\dimen138
 \enit@toks=\toks27
 \enit@inbox=\box29
-\enitdp@description=\count164
+\enitdp@description=\count165
 )
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
@@ -403,7 +411,7 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
 \FN@temptoken=\toks28
 \footnotemargin=\dimen139
-\c@pp@next@reset=\count165
+\c@pp@next@reset=\count166
 Package footmisc Info: Declaring symbol style bringhurst on input line 855.
 Package footmisc Info: Declaring symbol style chicago on input line 863.
 Package footmisc Info: Declaring symbol style wiley on input line 872.
@@ -414,23 +422,23 @@ Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
 .
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count166
+\lst@mode=\count167
 \lst@gtempboxa=\box30
 \lst@token=\toks29
-\lst@length=\count167
+\lst@length=\count168
 \lst@currlwidth=\dimen140
-\lst@column=\count168
-\lst@pos=\count169
+\lst@column=\count169
+\lst@pos=\count170
 \lst@lostspace=\dimen141
 \lst@width=\dimen142
-\lst@newlines=\count170
-\lst@lineno=\count171
+\lst@newlines=\count171
+\lst@lineno=\count172
 \lst@maxwidth=\dimen143
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
-\c@lstnumber=\count172
-\lst@skipnumbers=\count173
+\c@lstnumber=\count173
+\lst@skipnumbers=\count174
 \lst@framebox=\box31
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
@@ -444,18 +452,20 @@ Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: dvips.def on input line 130.
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
-File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
-))
+Package color Info: Driver file: pdftex.def on input line 130.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/rotating/rotating.sty
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
-\c@r@tfl@t=\count174
+\c@r@tfl@t=\count175
 \rotFPtop=\skip98
 \rotFPbot=\skip99
 \rot@float@box=\box32
 \rot@mess@toks=\toks30
+)
+\c@theorem=\count176
+
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/ttlkeys.def
+File: ttlkeys.def 2011/12/15
 ))
 (./qtk_thesis.aux)
 \openout1 = `qtk_thesis.aux'.
@@ -474,26 +484,26 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 
 *geometry* driver: auto-detecting
-*geometry* detected driver: dvips
+*geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
-* driver: dvips
+* driver: pdftex
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(89.62709pt, 418.25368pt, 89.6271pt)
-* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
+* h-part:(L,W,R)=(56.9055pt, 512.14963pt, 28.45274pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=418.25368pt
-* \textheight=591.5302pt
-* \oddsidemargin=17.3571pt
-* \evensidemargin=17.3571pt
-* \topmargin=29.13666pt
+* \textwidth=512.14963pt
+* \textheight=731.23584pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-15.36449pt
 * \headheight=0.0pt
 * \headsep=0.0pt
 * \topskip=12.0pt
-* \footskip=0.0pt
+* \footskip=28.45274pt
 * \marginparwidth=35.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
@@ -507,15 +517,29 @@ LaTeX Font Info:    ... okay on input line 4.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count177
+\scratchdimen=\dimen144
+\scratchbox=\box33
+\nofMPsegments=\count178
+\nofMParguments=\count179
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count180
+\MPscratchDim=\dimen145
+\MPnumerator=\count181
+\makeMPintoPDFobject=\count182
+\everyMPtoPDFconversion=\toks32
+)
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
+ (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-\c@lstlisting=\count175
+\c@lstlisting=\count183
  (./qtk_thesis.toc)
 \tf@toc=\write3
 \openout3 = `qtk_thesis.toc'.
@@ -523,12 +547,10 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 
 [4
 
-] (./introduction.tex
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./introduction.tex
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-) [5
-
-]
+)
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 12.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
@@ -536,32 +558,52 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 12.
- [6] [7])
-(./chapter_1.tex [8
+ [5
+
+] [6])
+(./chapter_1.tex <../figures/qr-v1.png, id=15, 293.095pt x 293.095pt>
+File: ../figures/qr-v1.png Graphic file (type png)
+
+<use ../figures/qr-v1.png>
+Package pdftex.def Info: ../figures/qr-v1.png used on input line 23.
+(pdftex.def)             Requested size: 153.64644pt x 153.6446pt.
+ [7
 
 
-]
+] [8 <../figures/qr-v1.png (PNG copy)>])
+(./chapter_2.tex [9
 
-! LaTeX Error: Cannot determine size of graphic in ../figures/qr-v1.png (no Bou
-ndingBox).
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 \includegraphics{qr-v1.png}
-                                
-? q
-OK, entering \batchmode...
-File: ../figures/qr-v1.png Graphic file (type eps)
- <../figures/qr-v1.png>) [9] (./qtk_thesis.aux) ) 
+] [10] [11]) [12] (./chapter_4.tex [13
+
+] [14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
+[]\OT1/cmr/m/n/12 Duration
+ []
+
+[16] [17]) [18]
+
+Package caption Warning: Unused \captionsetup[subfigure] on input line 110.
+See the caption package documentation for explanation.
+
+(./qtk_thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 7206 strings out of 495029
- 107286 string characters out of 6181523
- 280220 words of memory out of 5000000
- 10273 multiletter control sequences out of 15000+600000
+ 7697 strings out of 495028
+ 113706 string characters out of 6181497
+ 289254 words of memory out of 5000000
+ 10748 multiletter control sequences out of 15000+600000
  7963 words of font info for 29 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 49i,6n,45p,1120b,286s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 49i,15n,45p,1554b,401s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on qtk_thesis.pdf (15 pages, 91950 bytes).
+PDF statistics:
+ 74 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on qtk_thesis.dvi (6 pages, 14220 bytes).
