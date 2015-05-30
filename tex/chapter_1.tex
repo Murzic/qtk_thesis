@@ -18,11 +18,20 @@ The QR code is designed in such a way that, the more data you want to store in i
 
 So, the QR codes have been categorized in versions, from Version 1 to Version 40.  QR code Versions differing from the previous one by having 4 more modules on each side: Version 1 with ( 21 x 21 modules ) with possibility of storing 25 alphanumerics with the lowest correction level and Version 40 with  ( 177 x 177 modules ) with 1852 alphanumerics. The maximum data storage for each version is derived from the amount of data, character type and correction level.
 
+
 \begin{figure}[!ht]
-\centering
-\includegraphics[width=0.3\textwidth,natheight=292, natwidth=292]{qr-v1.png}
-\caption{Version 1 QR Code}
+  \centering
+  \subfloat[Version 1 QR code\label{fig1.1a}]{%    
+    \includegraphics[width=0.48\textwidth,natheight=292, natwidth=292]{qr_v1.png}    
+  }
+ \hspace{0.09cm}
+  \subfloat[Version 40 QR code\label{fig1.1b}]{%
+    \includegraphics[width=0.48\textwidth,natheight=1000, natwidth=1000]{qr_v40.png}
+  }
+  \caption{Version 1 QR code with 21 x 21 modules (a), version 40 QR code with 177 x 177 modules (b).}
+  \label{fig1.1}
 \end{figure}
+
 
 
 Having this technology at hand, the system gets to simplify the way in which it recognizes the different pages it is processing at the low level of its implementation. Given that information being stored in the QR code will be minimal, it is not required a size bigger than the Version 1 provides us, thus saving some space on the printed paper. The correction level will be set to high, for safety reasons and also because it won’t conflict with the number of characters needed to be encoded.

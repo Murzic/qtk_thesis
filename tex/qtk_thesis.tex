@@ -2,6 +2,7 @@
 \usepackage{License_style}
 
 \begin{document}
+\renewcommand{\labelitemi}{--}
 
 \numberwithin{lstlisting}{section}
 
@@ -29,5 +30,11 @@
 \input{chapter_4.tex}
 \cleardoublepage
 
+
+\phantomsection
+%\setcounter{page}{235}
+\addcontentsline{toc}{section}{Appendix}
+\input{appendix.tex}
+\cleardoublepage
 
 \end{document}

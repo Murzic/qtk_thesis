@@ -17,3 +17,8 @@
 \contentsline {subsection}{\numberline {3.4}Economical proof}{17}
 \contentsline {subsubsection}{\numberline {3.4.1}Tangible and intangible expenses}{17}
 \contentsline {subsubsection}{\numberline {3.4.2}Salary expenses}{17}
+\contentsline {subsubsection}{\numberline {3.4.3}Indirect Expenses}{18}
+\contentsline {subsubsection}{\numberline {3.4.4}Wear and Project Cost}{18}
+\contentsline {subsection}{\numberline {3.5}Management}{19}
+\contentsline {subsection}{\numberline {3.6}Economic conclusion}{20}
+\contentsline {section}{Appendix}{21}
