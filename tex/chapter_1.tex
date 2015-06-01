@@ -1,10 +1,30 @@
 \section{Domain Analysis}
 \phantomsection
 
+\subsection{Problem Definition}
+
 \subsection{REST}
 REST (Representational State Transfer) relies on a stateless, client-server architecture that uses the HTTP protocol in the most cases.
 REST is an architecture style used in the development of Web services. Instead of using complex mechanisms such as CORBA, RPC or SOAP to connect between devices, REST is preffered as a way for the devices to communicate.
-REST uses HTTP for the CRUD (Create/Read/Update/Delete) operations.
+REST uses HTTP for the CRUD operations (Table \ref{crud_operations}).
+\begin{table}[ht!]
+\centering
+\caption{CRUD operations}
+{
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{ lll }
+
+  Operation & SQL & HTTP \\ \hline
+  Create &  INSERT & PUT/POST \\
+  Read(Retrieve) & SELECT & GET \\
+  Update(Modify) & UPDATE & PUT/PATCH \\
+  Delete(Destroy) & DELETE & DELETE \\
+
+\end{tabular}
+}
+\label{crud_operations}
+\end{table}
+
 As a programming approach, REST is a lightweight alternative to Web Services.
 A REST service is:
 \begin{itemize}
@@ -78,8 +98,27 @@ If we support these constraints, we get the following possibilities inside our s
 
 \subsection{Rails}
 
+Rails has some principles to which it adheres to:
+\begin{description}
+
+  \item[Don't Repeat Yourself] DRY says that ``Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.'' \cite{dry_principle} You can get more maintainability and extensibility by refraining to write duplicate code, documentation or any other information related to the system being developed. 
+
+  \item[Convention Over Configuration] ``Rails has opinions about the best way to do many things in a web application, and defaults to this set of conventions, rather than require that you specify every minutiae through endless configuration files.'' \cite{rails_principles}
+
+  \item[Fat models, skinny controller] The main application logic must be placed inside the model. The controller must remain as thin as possible. 
+\end{description}
+
+
 Rails is a web-application framework that includes all necessary to create web applications fitting to the Model-View-Controller (MVC) pattern.
-MVC pattern comprehension is essential to understanding Rails, so MVC will be described further.
+MVC pattern comprehension is essential to understanding Rails, so MVC will be described further. 
+Figure \ref{rails_mvc} shows how Rails implements MVC. 
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=1.2]{rails_MVC}
+\caption{Rails MVC}\label{rails_mvc}
+\end{figure}
+
 MVC splits your application into three layers, each having a distinctive duty.
 
 The Model layer depicts your domain model and contains the business logic that is individual to your application. ActiveRecord::Base is the class from which the database-backed model classes are inherited, in Rails. Data from database tuples are given as objects which have business logic methods, thanks to Active Record. Models can be ordinary Ruby classes, or classes that apply a set of interfaces as given by the Active Record module, while most Rails models are supported by a database.
@@ -100,10 +139,18 @@ In Rails framwork, the Action Dispatch functionality is dispatched by default, a
 
 Action Pack contains both Action Dispatch and Action Controller modules. So it provides both the view and the controller layers of the MVC. Action Pack is a framework that manages web requests. With it, you can route (map the request URLs to their respective actions), establish controllers which apply actions, and render views(templates of different formats) as responses.
 
-
 ``Templates'' are the essential part of the View layer and they are the ones that deliver the  proper representations of the app's resources. The most frequent view temlates are ERB files, which are HTML with embedded Ruby, though they can be found in diverse formats. Action View manages the view generation. A controller response or some text is usually rendered in a view.
  
 Rails also has Action Mailer, used to generate and send emails; Active Job, an interface used to put different jobs to run on background using one of the queueing backends; Active Support, a module offering library extensions and utility classes.
+
+The jobs that \textit{Active Job} declare are anything that needs processing, code that need to be split in smaller tasks and run in parallel, code that takes to much time for the user to wait, sending mails and others. 
+
+Action Mailer's $\#deliver\_later$ method, that transforms the email sending process into a background job that will be executed later is supported by Active Job as its backend. Mailing in background is basic in today's web applications, freeing the user from waiting for the server's response in order to proceed further.
+  
+Active Job provides a job insfrastructure for every Rails application, in both background and immediate processing options. Other backend libraries for creating background jobs can be added to the system and there is no need to worry about the differences in the API in these libraries. Also this gives the possibility to change them without having to write your jobs anew.
+
+
+
 
 \subsection{Quick Response Codes}
 The QR code, which stands for Quick Response Code, is a two-dimensional barcode, which was initially used for tracking inventory. It was developed in Japan by a subdivision of Toyota. Today, it is widely spread and people have found more and more uses for it. The fast gain in popularity was due to the superiority of the QR codes’ read speed and storage capacity versus the UPC barcodes.
@@ -136,9 +183,261 @@ So, the QR codes have been categorized in versions, from Version 1 to Version 40
   \label{fig1.1}
 \end{figure}
 
-
-
 Having this technology at hand, the system gets to simplify the way in which it recognizes the different pages it is processing at the low level of its implementation. Given that information being stored in the QR code will be minimal, it is not required a size bigger than the Version 1 provides us, thus saving some space on the printed paper. The correction level will be set to high, for safety reasons and also because it won’t conflict with the number of characters needed to be encoded.
+
+\newpage
+\subsection{Tesseract}
+
+
+\subsection{Prawn}
+Prawn is a PDF generation library written in ruby that is simple to use, quite performant and provides features such as:
+
+\begin{itemize} 
+  \item PDF builtin and embedded TrueType fonts support.
+  \item Vector drawing, for objects as lines, curves, ellipses, polygons, rectangles.
+  \item Inserting PNG and JPG images, with scaling options.
+  \item PDF outlines for navigation support.
+  \item Password protection and encryption.
+  \item Basic layout low level tools, grid system.
+  \item Allows users to make custom extensions.
+  \item Extensive text rendering for flowing text.
+  \item Content iteration rendering for page numbers, footers and headers.
+  \item Support for UTF-8 fonts encoding, fallback font, right to left text rendering, internationalization features and customizable text wrapping.
+\end{itemize}
+
+Prawn is not a HTML to PDF generator. It is also not used for publishing or reporting. It is a particularly adaptable PDF document generation system. 
+
+The special characteristic which differentiate Prawn from other systems is that the origin of the page is considered the botom left corner. This thing makes it a bit unconvenient when using Prawn alongside a system which has the origin situated at the top left corner. Still, the page is filled from the top to the bottom, thus the cursor for inserting content starts at the top of the page. After the content is entered, the functions responsible for putting it in, proceed to the page's bottom.
+
+PDF Documents are generated in three different ways:
+\begin{enumerate}
+  \item Prawn::Document instance creation
+    \begin{lstlisting}[language=Ruby, caption={Prawn Document generation with instance creation}, label=ruby_prawn1]
+    pdf = Prawn::Document.new
+    pdf.text "New document"
+    pdf.render_file "document.pdf"
+    \end{lstlisting}
+
+  \item Using Prawn::Document.generate method
+    \begin{lstlisting}[language=Ruby, caption={Prawn Document generation with method}, label=ruby_prawn2]
+    Prawn::Document.generate("document2.pdf") do 
+      text "generate without block argument"
+    end
+    \end{lstlisting}
+
+  \item The generate method with explicit block arguments
+    \begin{lstlisting}[language=Ruby, caption={Prawn Document generation with block argument}, label=ruby_prawn3]
+    Prawn::Document.generate("document3.pdf") do |pdf|
+      pdf.text "generate with block"
+    end
+    \end{lstlisting}
+\end{enumerate}
+
+When we create the instance object of Prawn::Document, we have to call $render\_file$ to generate the pdf document. 
+When using the generate method, the pdf object will be rendered after the block has been exited. When no block argument is given, a freshly created Prawn::Document instance is used for evaluating the block. When the block argument is given, a instance is created and passed to the block. The implicit method is preferred, because it requires less typing and defines and renders the pdf at the same time. 
+
+
+\subsection{Image Recognition}
+
+\subsubsection{Chunky PNG}
+
+ChunkyPNG is a Ruby library, which hasn't got any dependency on any other libraries, thus being a plain Ruby library.
+It has the following features:
+
+\begin{itemize}
+  \item Read/Write access to the image’s pixels.
+  \item Alpha formation of different images.
+  \item Supports all color modes (grayscale, true color and indexed) and transparency. Based on the image’s colors, the most suitable color mode will be chosen automatically
+  \item Decodes all PNG standard images. This means that all standard color modes with variable depth of the bits and transparency, filtering options are also contained in Chunky PNG.
+  \item For images that are stored in chunks, you get Read/Write acess to all its metadata.
+  \item There is the possibility to operate with RMagick.
+  \item Depending on the device, it uses an integer number of bytes of memory for every pixel, making it memory efficient.
+  \item By only using integer math and an encoding routine, it is considered quite fast for Ruby norms. 
+\end{itemize}
+
+PNGs can be loaded from files, IO streams and binary string:
+
+\begin{lstlisting}[language=Ruby, caption={Loading PNGs with Chunky PNG}, label=chunky_png1]
+File.open('image.png', 'rb') do |input| 
+  png = ChunkyPNG::Image.from_io(input)
+end
+png = ChunkyPNG::Image.from_file('image.png')
+png = ChunkyPNG::Image.from_blob(File.read('image.png'))
+\end{lstlisting}
+
+Consider supplying the pixel data as a raw RGBA or RGB formatted stream, because the decoding fo PNG files is really slow and because, loading these types of streams will be \~1000 faster than loading the PNG encoded image.
+
+\begin{lstlisting}[language=Ruby, caption={Loading pixel stream with Chunky PNG}, label=chunky_png2]
+png = ChunkyPNG::Image.from_rgba_stream(width, height, File.read('pixels.rgba'))
+png = ChunkyPNG::Image.from_rgb_stream(width, height, File.read('pixels.rgb'))
+\end{lstlisting}
+
+The image data can be saved and encoded to a file, IO stream or binary string:
+\begin{lstlisting}[language=Ruby, caption={Loading pixel stream with Chunky PNG}, label=chunky_png3]
+png.save('file.png')
+File.open('iostream.png', 'wb' ) do |io| 
+  png.write(io)
+end
+binary_string = png.to_blob
+\end{lstlisting}
+
+The weakness of ChunkyPNG is that it is vulnerable to DOS attacks. When loading a certain constructed PNG file, ChunkyPNG can run out of memory. It is very hard to apply a fix due to the pure-Ruby character of the library. To avoid this issue and reliably deal with images that are not to be trusted, the image processing done by ChunkyPNG must be done in a different process.
+
+
+\subsubsection{Oily PNG}
+ChunkyPNG can be sped up using the OilyPNG Ruby C extension. OilyPNG does not require any libraries because it is an independent module. It has a different approach to encoding and decoding PNG images than ChunkyPNG's. The implementation of these operations is much faster.
+
+Performance comparison in tables \ref{decoding_speed} and \ref{encoding_speed} cited from \cite{encode_decode_speed}:
+
+\begin{table}[ht!]
+\centering
+\caption{Decoding speed in seconds}
+{
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{ lll }
+                        &  ChunkyPNG   &  OilyPNG   \\ \hline
+PNG - no filtering      & 1.056832   & 0.078345 \\
+PNG - UP filtering      & 3.327986   & 0.078387 \\
+PNG - PAETH filtering   & 7.499367   & 0.089143 \\
+From RGBA pixelstream   & 0.032571   & 0.035790 \\
+From RGB pixelstream    & 0.221163   & 0.226358 \\
+\end{tabular}
+}
+\label{decoding_speed}
+\end{table}
+
+\begin{table}[ht!]
+\centering
+\caption{Encoding speed in seconds}
+{
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{ lll }
+                        & ChunkyPNG   &   OilyPNG \\ \hline
+Autodetect (indexed)    & 1.762275    & 0.715871 \\
+$:no_compression$       & 0.999972    & 0.704999 \\
+$:fast_rgba$            & 0.279853    & 0.098239 \\
+$:fast_rgb$             & 0.285781    & 0.071865 \\
+$:good_compression$     & 1.015139    & 0.717544 \\
+$:best_compression$     & 3.809578    & 0.713787 \\
+$:rgb$                  & 2.603707    & 0.084677 \\
+$:rgba$                 & 3.451300    & 0.114356 \\
+$:indexed$              & 1.799546    & 0.707457 \\
+$:interlaced$           & 1.778964    & 0.715108 \\
+to RGBA pixelstream     & 0.242787    & 0.250338 \\
+to RGB pixelstream      & 0.257684    & 0.264674 \\
+\end{tabular}
+}
+\label{encoding_speed}
+\end{table}
+
+
+
+\subsection{Resque}
+
+Resque is a library for creating background jobs backed by Redis. The created jobs can be put on multiple queues and processed at a later time.
+
+% Background jobs can be any Ruby class or module that responds to perform. Your existing classes can easily be converted to background jobs or you can create new classes specifically to do work. Or, you can do both.
+
+% Resque is heavily inspired by DelayedJob (which rocks) and comprises three parts:
+
+% A Ruby library for creating, querying, and processing jobs
+% A Rake task for starting a worker which processes jobs
+% A Sinatra app for monitoring queues, jobs, and workers.
+% Resque workers can be distributed between multiple machines, support priorities, are resilient to memory bloat / "leaks," are optimized for REE (but work on MRI and JRuby), tell you what they're doing, and expect failure.
+
+% Resque queues are persistent; support constant time, atomic push and pop (thanks to Redis); provide visibility into their contents; and store jobs as simple JSON packages.
+
+% The Resque frontend tells you what workers are doing, what workers are not doing, what queues you're using, what's in those queues, provides general usage stats, and helps you track failures.
+
+% You can't always do work right away. Sometimes, you need to do it later. Resque is a really simple way to manage a pile of work that your application needs to do: 1.5 million installs can't be wrong!
+
+% To define some work, make a job. Jobs need a work method:
+
+% class ImageConversionJob
+%   def work
+%     # convert some kind of image here
+%   end
+% end
+% Next, we need to procrastinate! Let's put your job on the queue:
+
+% resque = Resque.new
+% resque << ImageConversionJob.new
+% Neat! This unit of work will be stored in Redis. We can spin up a worker to grab some work off of the queue and do the work:
+
+% bin/resque work
+% This process polls Redis, grabs any jobs that need to be done, and then does them. :metal:
+
+% Jobs
+
+% What deserves to be a background job? Anything that's not always super fast. There are tons of stuff that an application does that falls under the 'not always fast' category:
+
+% Warming caches
+% Counting disk usage
+% Building tarballs
+% Firing off web hooks
+% Creating events in the db and pre-caching them
+% Building graphs
+% Deleting users
+% And it's not always web stuff, either. A command-line client application that does web scraping and crawling is a great use of jobs, too.
+
+% Workers
+
+% You can start up a worker with
+
+% $ bin/resque work
+% This will basically loop over and over, polling for jobs and doing the work. You can have workers work on a specific queue with the --queue option:
+
+% $ bin/resque work --queues=high,low
+% $ bin/resque work --queue=high
+% This starts two workers working on the high queue, one of which also polls the low queue.
+
+% You can control the length of the poll with interval:
+
+% $ bin/resque work --interval=1
+% Now workers will check for a new job every second. The default is 5.
+
+% Resque workers respond to a few different signals:
+
+% Resque workers respond to a few different signals:
+
+% QUIT - Wait for child to finish processing then exit
+% TERM / INT - Immediately kill child then exit
+% USR1 - Immediately kill child but don't exit
+% USR2 - Don't start to process any new jobs
+% CONT - Start to process new jobs again after a USR2
+% If you want to gracefully shutdown a Resque worker, use QUIT.
+
+% If you want to kill a stale or stuck child, use USR1. Processing will continue as normal unless the child was not found. In that case Resque assumes the parent process is in a bad state and shuts down.
+
+% If you want to kill a stale or stuck child and shutdown, use TERM
+
+% If you want to stop processing jobs, but want to leave the worker running (for example, to temporarily alleviate load), use USR2 to stop processing, then CONT to start it again.
+% Queue Priority
+
+% Queues are picked off in order of their priority. A job from a lower priority queue will only be picked off if there are no jobs for a higher priority queue available.
+
+% See Resque::WorkerQueueList#search_order for more details.
+
+% Priorities and Queue Lists
+
+% Resque doesn't support numeric priorities but instead uses the order of queues you give it. We call this list of queues the "queue list."
+
+% Let's say we add a warm_cache queue in addition to our file_serve queue. We'd now start a worker like so:
+
+% $ QUEUES=file_serve,warm_cache rake resque:work
+% When the worker looks for new jobs, it will first check file_serve. If it finds a job, it'll process it then check file_serve again. It will keep checking file_serve until no more jobs are available. At that point, it will check warm_cache. If it finds a job it'll process it then check file_serve (repeating the whole process).
+
+% In this way you can prioritize certain queues. At GitHub we start our workers with something like this:
+
+% $ QUEUES=critical,archive,high,low rake resque:work
+% Notice the archive queue - it is specialized and in our future architecture will only be run from a single machine.
+
+% At that point we'll start workers on our generalized background machines with this command:
+
+% $ QUEUES=critical,high,low rake resque:work
+% And workers on our specialized archive machine with this command:
+
+% $ QUEUE=archive rake resque:work
 
 \clearpage
 
