@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.22)  30 MAY 2015 14:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.22)  1 JUN 2015 10:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -553,23 +553,24 @@ File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 ) [5
 
 ] [6])
-(./chapter_1.tex <../figures/qr_v1.png, id=14, 250.9375pt x 250.9375pt>
+(./chapter_1.tex [7
+
+
+] [8] [9] [10]
+<../figures/qr_v1.png, id=29, 250.9375pt x 250.9375pt>
 File: ../figures/qr_v1.png Graphic file (type png)
 
 <use ../figures/qr_v1.png>
-Package pdftex.def Info: ../figures/qr_v1.png used on input line 26.
+Package pdftex.def Info: ../figures/qr_v1.png used on input line 130.
 (pdftex.def)             Requested size: 245.82962pt x 245.8443pt.
 
-<../figures/qr_v40.png, id=15, 1003.75pt x 1003.75pt>
+<../figures/qr_v40.png, id=30, 1003.75pt x 1003.75pt>
 File: ../figures/qr_v40.png Graphic file (type png)
 
 <use ../figures/qr_v40.png>
-Package pdftex.def Info: ../figures/qr_v40.png used on input line 30.
+Package pdftex.def Info: ../figures/qr_v40.png used on input line 134.
 (pdftex.def)             Requested size: 245.82962pt x 245.82135pt.
- [7
-
-
-] [8 <../figures/qr_v1.png (PNG copy)> <../figures/qr_v40.png (PNG copy)>]) (./
+ [11 <../figures/qr_v1.png (PNG copy)> <../figures/qr_v40.png (PNG copy)>]) (./
 chapter_2.tex
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 12.
 
@@ -578,13 +579,18 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 12.
- [9
+ [12
 
 
-] [10] [11])
-[12] (./chapter_4.tex [13
+] [13] [14])
+[15] (./chapter_4.tex [16
 
 ]
+
+LaTeX Warning: Reference `swot_analysis' on page 17 undefined on input line 22.
+
+
+
 Underfull \hbox (badness 1939) in paragraph at lines 78--78
 []\OT1/cmr/m/n/12 Automatically gen-er-ates quizzes
  []
@@ -609,32 +615,75 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--85
 \OT1/cmr/m/n/12 Google, Face-book, LinkedIn,
  []
 
-[14] [15]
+[17] [18]
+
+LaTeX Warning: Reference `4.1' on page 19 undefined on input line 125.
+
+
+LaTeX Warning: Reference `project_schedule' on page 19 undefined on input line 
+130.
+
+
+LaTeX Warning: Reference `project_schedule' on page 19 undefined on input line 
+130.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 143--143
 []\OT1/cmr/m/n/12 Duration
  []
 
-[16] [17] [18]) [19] [20] (./appendix.tex [21
+[19]
 
-]) (./qtk_thesis.aux) ) 
+LaTeX Warning: Reference `longterm_asset_expenses' on page 20 undefined on inpu
+t line 165.
+
+
+LaTeX Warning: Reference `direct_expenses' on page 20 undefined on input line 1
+65.
+
+
+LaTeX Warning: Reference `salary_expenses' on page 20 undefined on input line 2
+07.
+
+[20]
+
+LaTeX Warning: Reference `indirect_expenses' on page 21 undefined on input line
+ 250.
+
+[21]
+
+LaTeX Warning: Reference `project_cost' on page 22 undefined on input line 289.
+
+
+) [22] [23] (./appendix.tex [24
+
+]) (./qtk_thesis.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 7713 strings out of 495028
- 113953 string characters out of 6181497
- 290434 words of memory out of 5000000
- 10761 multiletter control sequences out of 15000+600000
- 7963 words of font info for 29 fonts, out of 8000000 for 9000
+ 7720 strings out of 495028
+ 114092 string characters out of 6181497
+ 290144 words of memory out of 5000000
+ 10767 multiletter control sequences out of 15000+600000
+ 8310 words of font info for 30 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  49i,15n,47p,1554b,443s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on qtk_thesis.pdf (18 pages, 120273 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmti12.pfb>
+Output written on qtk_thesis.pdf (21 pages, 140249 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
+ 102 PDF objects out of 1000 (max. 8388607)
+ 69 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

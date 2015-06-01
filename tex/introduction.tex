@@ -2,35 +2,39 @@
 % \phantomsection
 
 
-A deficient assessment system of students’ success can be observed today. Given the society’s  aspirations in terms of development of Information Technologies, which influence all other fields, including education, this project, “Quiz ToolKit” aims to streamline the creation and evaluation process of tests, in the teaching framework of universities. It is fast and objective, given that it generates, scans, process the “quiz” type tests of the students. It’s an instrument for monitoring the strengths, weaknesses and evolution of students, excluding the subjective marking method or accidental errors in doing so. This program ensures a higher education quality by meeting the highest standards in training and researching - an important element in the modernization agenda conveyed from the experience of the countries that have managed to improve the performances of their educational systems.
+A deficient assessment system of students’ success can be observed today. Given the society’s  aspirations in terms of development of Information Technologies, which influence all other fields, including education, this project, “Quiz ToolKit” aims to streamline the creation and evaluation of tests, in the teaching framework of universities. It is fast and objective, given that it generates, scans and processes the “quiz” type tests for students. It’s an instrument for monitoring the strengths, weaknesses and evolution of students, excluding the subjective marking method or accidental errors in doing so. This program ensures a higher education quality by meeting the highest standards in training and researching - an important element in the modernization agenda conveyed from the experience of the countries that have managed to improve the performances of their educational systems.
 Why was the quiz’s automatization chosen and not that of the tests and exams?
+
 The knowledge assessment must be accurate, therefore it was considered that a “quiz test” would be most suitable, given that it is a short evaluation, often used during the academic year, with specific questions and answers(multiple choice / true or false), whereas its “test” and “exam” counterparts are more subjective, due to the limitless ways in which the questions can be interpreted and answered by different persons.
-Quizzes are used to test students’ knowledge about a certain domain. They usually have a multiple or single choice answering structure and contain a relative amount of questions. Quizzes are considered less complicated than the common tests, because they already provide the student the possible answers to its questions. So, there is a chance that you can luckily select all the correct answers and ace the quiz. But at the same time, you can unluckily select the wrong ones, and therefore fail miserably.
-In a classroom full of students, having the same quiz on their tables, the possibility of peeking at one another’s paper becomes higher and the purpose of the quiz becomes useless, due to the erroneous assessment of students’ knowing. To avoid some of the students’ dishonest actions, the teacher must constantly patrol through the benches and not give them any chance of doing a wrong move. Another way of avoiding this, is for the teacher to create several versions of the quiz and distribute them in a way that it would be harder to cheat. But the effectiveness of this wouldn’t be too great. A better way is to create a different version of the quiz for every student. This isn’t ideal, but it would be way more challenging and the the true results of what’s in the students’ heads will be revealed to the teacher. He now has the information which can be used to decide what changes he should make to his teaching style or what students he should pay more attention when explaining  explaining certain parts of his course’s curriculum. 
-Let’s say there are thirty students which must take the quiz. The teacher has to spend quite some time to make a version of the quiz for each student. What about other courses’ quizzes? What about the ever changing curriculum and the need to change the quiz’s questions and topics? All these factors make the teacher be indecisive about the manner he should proceed with creating the quizzes or to use them at all in the teaching process. 
+Quizes are used to test students’ knowledge about a certain domain. They usually have a multiple or single choice answering structure and contain a relative amount of questions. Quizes are considered less complicated than the common tests, because they already provide the student the possible answers to its questions. So, there is a chance that you can luckily select all the correct answers and ace the quiz. But at the same time, you can unluckily select the wrong ones, and therefore fail miserably.
+
+In a classroom full of students, having the same quiz on their tables, the possibility of peeking at one another’s paper becomes higher and the purpose of the quiz becomes useless, due to the erroneous assessment of students’ knowing. To avoid some of the students’ dishonest actions, the teacher must constantly patrol through the benches and not give them any chance of cheating. Another way of avoiding this, is for the teacher to create several versions of the quiz and distribute them in a way that it would be harder to cheat. But the effectiveness of this wouldn’t be too great. A better way is to create a different version of the quiz for every student. This isn’t ideal, but it would be way more challenging and the the true results of what’s in the students’ heads will be revealed to the teacher. He now has the information which can be used to decide what changes he should make to his teaching style or what students he should pay more attention when explaining  explaining certain parts of his course’s curriculum. 
+
+Let’s say there are thirty students which must take the quiz. The teacher has to spend quite some time to make a version of the quiz for each student. What about other courses’ quizes? What about the ever changing curriculum and the need to change the quiz’s questions and topics? All these factors make the teacher be indecisive about the manner he should proceed with creating the quizes or to use them at all in the teaching process. 
+
 \begin{itemize}
-  \item Quiz ToolKit is a system which automates quizzes managing.
+  \item Quiz ToolKit is a system which automates quizes managing.
   \item Main features
   \begin{itemize}
-
-    \item Quiz generation - Based on the given quiz’s content and other options, QTK will generate a set of quizzes with the questions placed in a random order.
-    \item Quiz scan - Scanning the completed quizzes and storing the data.
+    \item Quiz generation - Based on the given quiz’s content and other options, QTK will generate a set of quizes with the questions placed in a random order.
+    \item Quiz scan - Scanning the completed quizes and storing the data.
     \item Data analyzing - Giving each completed quiz a mark using the data acquired from scanning.
-    \item Quiz exporting - Printing or saving the generated quizzes.
+    \item Quiz exporting - Printing or saving the generated quizes.
     \item User interface - Easy access to the above mentioned features
   \end{itemize}
   \item Teachers and students are the target audience
   \item Web Platform
 \end{itemize}
 
+The system, called Quiz ToolKit,  is a web application run on Ruby on Rails, make the above described issues about quizes, a trivial matter. It provides the teacher an environment which can be used to manage all of his quizes belonging to the courses he teaches. Given that the teacher entered the questions for a quiz in the system, he can generate a pdf file, which will be the print ready document containing multiple copies of quizes based on the options he selected. The options are: 
 
-The system, called Quiz ToolKit,  is a web application run on Ruby on Rails, make the above described issues about quizzes, a trivial matter. It provides the teacher an environment which can be used to manage all of his quizzes belonging to the courses he teaches. Given that the teacher entered the questions for a quiz in the system, he can generate a pdf file, which will be the print ready document containing multiple copies of quizzes based on the options he selected. The options are: 
 \begin{itemize}
   \item Randomly arrange the questions
   \item Make n number of copies
   \item Make n number of versions
   \item Select a student group(containing all its students’ names) for which the quiz will be generated    
 \end{itemize}
-Of course, having these possibilities to deal with quiz’s generation, we have yet to mention another issue, which is also as important: Checking the quizzes. QTK also takes that into consideration even from the generation stage, by having every sample generated for each student stored in the database. The teacher has only to collect the papers from the students, scan them and upload to QTK. The system will automatically check the answers of every student and compute the percentage of the correct answers.
+
+Of course, having these possibilities to deal with quiz’s generation, we have yet to mention another issue, which is also as important: Checking the quizes. QTK also takes that into consideration even from the generation stage, by having every sample generated for each student stored in the database. The teacher has only to collect the papers from the students, scan them and upload to QTK. The system will automatically check the answers of every student and compute the percentage of the correct answers.
 
 \clearpage

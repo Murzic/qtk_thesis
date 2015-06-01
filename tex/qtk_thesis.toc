@@ -1,24 +1,26 @@
 \thispagestyle {empty}
 \contentsline {section}{Introduction}{5}
 \contentsline {section}{\numberline {1}Domain Analysis}{7}
-\contentsline {subsection}{\numberline {1.1}Quick Response Codes}{7}
-\contentsline {subsubsection}{\numberline {1.1.1}QR Error Correction}{7}
-\contentsline {subsubsection}{\numberline {1.1.2}QR code sizes}{7}
-\contentsline {section}{\numberline {2}System Design}{9}
-\contentsline {subsection}{\numberline {2.1}Domain Model}{9}
-\contentsline {subsubsection}{\numberline {2.1.1}Use Case Actors}{9}
-\contentsline {subsubsection}{\numberline {2.1.2}Use Cases}{9}
-\contentsline {section}{\numberline {3}Economic Analysis}{13}
-\contentsline {subsection}{\numberline {3.1}Project Description}{13}
-\contentsline {subsection}{\numberline {3.2}SWOT Analysis}{14}
-\contentsline {subsection}{\numberline {3.3}Project time schedule}{14}
-\contentsline {subsubsection}{\numberline {3.3.1}Objectives}{14}
-\contentsline {subsubsection}{\numberline {3.3.2}Schedule}{15}
-\contentsline {subsection}{\numberline {3.4}Economical proof}{17}
-\contentsline {subsubsection}{\numberline {3.4.1}Tangible and intangible expenses}{17}
-\contentsline {subsubsection}{\numberline {3.4.2}Salary expenses}{17}
-\contentsline {subsubsection}{\numberline {3.4.3}Indirect Expenses}{18}
-\contentsline {subsubsection}{\numberline {3.4.4}Wear and Project Cost}{18}
-\contentsline {subsection}{\numberline {3.5}Management}{19}
-\contentsline {subsection}{\numberline {3.6}Economic conclusion}{20}
-\contentsline {section}{Appendix}{21}
+\contentsline {subsection}{\numberline {1.1}REST}{7}
+\contentsline {subsection}{\numberline {1.2}Rails}{9}
+\contentsline {subsection}{\numberline {1.3}Quick Response Codes}{10}
+\contentsline {subsubsection}{\numberline {1.3.1}QR Error Correction}{10}
+\contentsline {subsubsection}{\numberline {1.3.2}QR code sizes}{11}
+\contentsline {section}{\numberline {2}System Design}{12}
+\contentsline {subsection}{\numberline {2.1}Domain Model}{12}
+\contentsline {subsubsection}{\numberline {2.1.1}Use Case Actors}{12}
+\contentsline {subsubsection}{\numberline {2.1.2}Use Cases}{12}
+\contentsline {section}{\numberline {3}Economic Analysis}{16}
+\contentsline {subsection}{\numberline {3.1}Project Description}{16}
+\contentsline {subsection}{\numberline {3.2}SWOT Analysis}{17}
+\contentsline {subsection}{\numberline {3.3}Project time schedule}{17}
+\contentsline {subsubsection}{\numberline {3.3.1}Objectives}{17}
+\contentsline {subsubsection}{\numberline {3.3.2}Schedule}{18}
+\contentsline {subsection}{\numberline {3.4}Economical proof}{20}
+\contentsline {subsubsection}{\numberline {3.4.1}Tangible and intangible expenses}{20}
+\contentsline {subsubsection}{\numberline {3.4.2}Salary expenses}{20}
+\contentsline {subsubsection}{\numberline {3.4.3}Indirect Expenses}{21}
+\contentsline {subsubsection}{\numberline {3.4.4}Wear and Project Cost}{21}
+\contentsline {subsection}{\numberline {3.5}Management}{22}
+\contentsline {subsection}{\numberline {3.6}Economic conclusion}{23}
+\contentsline {section}{Appendix}{24}
