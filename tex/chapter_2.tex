@@ -4,8 +4,9 @@
 \subsection{Domain Model}
 
 \subsubsection{Use Case Actors}
+The main actor that can be considered in this system is the \textit{user}, since no administrative accounts are available, nor are they considered necessary at this moment.
 \begin{itemize}
-  \item Teacher
+  \item User
   \begin{itemize}
     \item Responsibilities in the system
     \begin{itemize}
@@ -13,18 +14,26 @@
     \end{itemize}
     \item Possibilities in the system
     \begin{itemize}
-      \item Create subjects, quizzes
-      \item Generate random or predefined quizzes
-      \item Automatic marking of the scanned quizzes
-      \item Saving/printing of the generated quizzes
-      \item Sharing courses’ directories or specific quizzes with other teachers
-      \item Uploading a file with all the questions and answers necessary for the quiz or manually typing them
+      \item Manage student groups 
+      \item Create courses, quizes, questions.
+      \item Generate random or predefined quizes
+      \item Uploading of completed quizes
+      \item Automatic marking of the scanned quizes
+      \item Saving/printing of the generated quizes
     \end{itemize}
   \end{itemize}
 \end{itemize}
 
 
-\subsubsection{Use Cases}
+\subsubsection{Use Case Diagram}
+The use case diagram given below \ref{use_case_diagram}, shows the main actions that can be performed by an user inside the application. There are six direct actions presented for this purpose. The first one and the last two, counting from top to bottom, represent the managing part of the application, which includes the courses, quizes and questions. They have been chosen as actions to be described here, because togethe they comprise a big part of the application's functionality. This managing method is similar to a simplistic file manager system. You can do the basic operations in each compartment: create, delete, rename and view. The next action is about \textit{student group} and \textit{students} managing. It was not grouped together with the previous actions, because it does not have a direct contact with them in the front-end designed for the users. It practically does the same operations upon the created instances. The \textit{generate quiz} action is one of the two most essential actions, that the QTK is heavily relying on. From the user's point of view it represents a button that is present in all of the quizes' view pages. It is used to generate ready to print quizes, devised for specific purposes, that the user has in mind. This action also covers the action of choosing the options for generating those particular quizes. The \textit{upload quiz} action, is the second most important action, that simply represents the uploading of the completed quizes' scans to the application. This upload though, chains to itself two other indirect actions, that occur immediately after it is finished. These are the \textit{process quiz} action, which as the name suggests, process the image that was uploaded, and the \textit{mark quiz} action, which use the data aquired from the processing to give a rating to that quiz's filling.
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=1.2]{use_case}
+\caption{Use case diagram} \label{use_case_diagram}
+\end{figure}
+
+\subsubsection{Use Cases Description}
 \begin{itemize}
   \item Register
   \begin{itemize}
@@ -101,10 +110,10 @@
 
   \item Delete a quiz
   \begin{itemize}
-    \item User selects from the list of quizzes, the ones which should be deleted by checking the boxes.
+    \item User selects from the list of quizes, the ones which should be deleted by checking the boxes.
     \item User clicks “delete” button
     \item User presses “yes” in the dialog window
-    \item The selected quizzes are deleted
+    \item The selected quizes are deleted
   \end{itemize}    
 
   \item View a quiz
@@ -145,7 +154,7 @@
     \item PDF file is saved on the machine
   \end{itemize}
 
-  item Scan and process quizzes
+  item Scan and process quizes
   \begin{itemize}
     \item The user clicks on “upload” button on the main page
     \item He selects the files and uploads them
@@ -173,3 +182,5 @@
     \item The student appears in the list
   \end{itemize}
 \end{itemize}
+
+\subsection{Class Diagrams}

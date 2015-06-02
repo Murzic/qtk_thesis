@@ -333,111 +333,85 @@ to RGB pixelstream      & 0.257684    & 0.264674 \\
 
 
 \subsection{Resque}
+Some work can't be done instantly and needs to be scheduled for another time. Resque can be used to do this in a simple way and also gives you the possibility to manage all the work that the application had stacked.
+Resque is a library for creating background jobs and it uses Redis to manage the queues. The created jobs can be put on multiple queues and processed at a later time.
+Any Ruby class or module that responds to the $perform$ method, can be a background job. Classes can be created with intention to do background jobs, or the already existing classes can be converted as jobs.
 
-Resque is a library for creating background jobs backed by Redis. The created jobs can be put on multiple queues and processed at a later time.
+Resque contains three parts:
 
-% Background jobs can be any Ruby class or module that responds to perform. Your existing classes can easily be converted to background jobs or you can create new classes specifically to do work. Or, you can do both.
+\begin{enumerate}
+  \item A Ruby library for creating, processing and querying jobs
+  \item A Rake task for starting a worker for job processing
+  \item A Sinatra application for keeping track of the jobs, queues and workers.
+\end{enumerate}
 
-% Resque is heavily inspired by DelayedJob (which rocks) and comprises three parts:
+Resque workers assigned to different devices, they can uphold priorities and are resistant against memory leaks. They indicate what they're doing and expect failure.
 
-% A Ruby library for creating, querying, and processing jobs
-% A Rake task for starting a worker which processes jobs
-% A Sinatra app for monitoring queues, jobs, and workers.
-% Resque workers can be distributed between multiple machines, support priorities, are resilient to memory bloat / "leaks," are optimized for REE (but work on MRI and JRuby), tell you what they're doing, and expect failure.
+Resque queues are always available, deliver visibility into their internals and stack the jobs as JSONs. Also, thanks to Redis, Redis queues support atomic push and pop.
 
-% Resque queues are persistent; support constant time, atomic push and pop (thanks to Redis); provide visibility into their contents; and store jobs as simple JSON packages.
+What workers work on or don't work on, what queues they are operating in, what's inside those queues, is shown by the Resque frontend. It also offers usage stats, and helps tracking errors.
 
-% The Resque frontend tells you what workers are doing, what workers are not doing, what queues you're using, what's in those queues, provides general usage stats, and helps you track failures.
+To do some background work, a job must be defined with a $work$ method, as in listing \ref{job_define}:
 
-% You can't always do work right away. Sometimes, you need to do it later. Resque is a really simple way to manage a pile of work that your application needs to do: 1.5 million installs can't be wrong!
+\begin{lstlisting}[language=Ruby, caption={Defining a job class}, label=job_define]
+class FileProcessingJob
+  def work
+    # Processing a file
+  end
+end
+\end{lstlisting}
 
-% To define some work, make a job. Jobs need a work method:
+Further, we need to put our job on the queue \ref{job_enqueue}:
 
-% class ImageConversionJob
-%   def work
-%     # convert some kind of image here
-%   end
-% end
-% Next, we need to procrastinate! Let's put your job on the queue:
+\begin{lstlisting}[language=Bash, caption={Enqueue a job}, label=job_enqueue]
+queue = Resque.new
+queue << FileProcessingJob.new
+\end{lstlisting}
 
-% resque = Resque.new
-% resque << ImageConversionJob.new
-% Neat! This unit of work will be stored in Redis. We can spin up a worker to grab some work off of the queue and do the work:
+Now, this job will be enqueued in Redis. We just need a worker to get it and work on it \ref{worker_start}:
+\begin{lstlisting}[language=Bash, caption={Create a worker}, label=worker_start]
+$ bin/resque work
+\end{lstlisting}
 
-% bin/resque work
-% This process polls Redis, grabs any jobs that need to be done, and then does them. :metal:
+The process that is started here, queries the Redis queue, takes any job that is there and executes it. This process repeats itself over and over again. The ``--queue'' option can be used to specify the queue from which the worker should take his jobs. The ``--interval'' option is used to give waiting time before the worker polls the queue for a new job.
 
-% Jobs
+Workers react to several signals:
+\begin{enumerate}
+  \item QUIT - Wait for child process to end then exit
+  \item TERM / INT - Instantly kill child process then exit
+  \item USR1 - Instantly kill child process but don't exit
+  \item USR2 - No jobs are started being processed
+  \item CONT - After USR2 signal start processing jobs again
+\end{enumerate}
 
-% What deserves to be a background job? Anything that's not always super fast. There are tons of stuff that an application does that falls under the 'not always fast' category:
+QUIT signal is usually used to shutdown a worker.
+If an obsolete or clogged child need to be killed, USR1 should be used. If the child is present, the processing will continue as normal. Otherwise the parent process is shut down, because Resque is going to see it as a bad process.
+To kill an obsolete or clogged child and shutdown, TERM should be used.
+To leave the worker running, but not doing any jobs, USR2 is used to stop the processing. CONT is used to restart it.
 
-% Warming caches
-% Counting disk usage
-% Building tarballs
-% Firing off web hooks
-% Creating events in the db and pre-caching them
-% Building graphs
-% Deleting users
-% And it's not always web stuff, either. A command-line client application that does web scraping and crawling is a great use of jobs, too.
 
-% Workers
+Jobs can be anything that isn't fast enough to be waited upon in the main application interface. These things are various and there is always something that can be safely run as a background job.
+\begin{itemize}
+  \item Deleting data from database
+  \item Computing disk usage
+  \item Building tarballs
+  \item Populate cache with valid data
+  \item Building graphs
+  \item Generating stuff
+  \item Creating events in the db and pre-caching them
+\end{itemize}
 
-% You can start up a worker with
+The queues' priority indicate which one will be processed first. When all of the jobs from a higher priority queue are processed and there is none left, the jobs from a lower priority queue are going to be executed.
 
-% $ bin/resque work
-% This will basically loop over and over, polling for jobs and doing the work. You can have workers work on a specific queue with the --queue option:
+The ``queue list'' is the list containing the queues put in the order given by the user. Resque does not have numeric priorities, so this ``queue list'' is used instead. 
 
-% $ bin/resque work --queues=high,low
-% $ bin/resque work --queue=high
-% This starts two workers working on the high queue, one of which also polls the low queue.
+When we add a $high\_priority$ queue near the $medium\_priority$ queue, the worker is started using rake, like this \ref{two_queues_worker}:
+\begin{lstlisting}[language=Bash, caption={Working on two queues}, label=two_queues_worker]
+$ QUEUES=high_priority,medium_priority rake resque:work
+\end{lstlisting}
 
-% You can control the length of the poll with interval:
+The $high\_priority$ queue is first checked when searching for jobs. If the worker finds a job on this queue, it starts processing it and then check this queue again. This repeats until no job is found. Now, the next queue, which is $medium\_priority$ will be queried for jobs. If a job is found, the worker will process it and then check again the highest priority queue. In this way the queues are prioritized in Resque.
 
-% $ bin/resque work --interval=1
-% Now workers will check for a new job every second. The default is 5.
-
-% Resque workers respond to a few different signals:
-
-% Resque workers respond to a few different signals:
-
-% QUIT - Wait for child to finish processing then exit
-% TERM / INT - Immediately kill child then exit
-% USR1 - Immediately kill child but don't exit
-% USR2 - Don't start to process any new jobs
-% CONT - Start to process new jobs again after a USR2
-% If you want to gracefully shutdown a Resque worker, use QUIT.
-
-% If you want to kill a stale or stuck child, use USR1. Processing will continue as normal unless the child was not found. In that case Resque assumes the parent process is in a bad state and shuts down.
-
-% If you want to kill a stale or stuck child and shutdown, use TERM
-
-% If you want to stop processing jobs, but want to leave the worker running (for example, to temporarily alleviate load), use USR2 to stop processing, then CONT to start it again.
-% Queue Priority
-
-% Queues are picked off in order of their priority. A job from a lower priority queue will only be picked off if there are no jobs for a higher priority queue available.
-
-% See Resque::WorkerQueueList#search_order for more details.
-
-% Priorities and Queue Lists
-
-% Resque doesn't support numeric priorities but instead uses the order of queues you give it. We call this list of queues the "queue list."
-
-% Let's say we add a warm_cache queue in addition to our file_serve queue. We'd now start a worker like so:
-
-% $ QUEUES=file_serve,warm_cache rake resque:work
-% When the worker looks for new jobs, it will first check file_serve. If it finds a job, it'll process it then check file_serve again. It will keep checking file_serve until no more jobs are available. At that point, it will check warm_cache. If it finds a job it'll process it then check file_serve (repeating the whole process).
-
-% In this way you can prioritize certain queues. At GitHub we start our workers with something like this:
-
-% $ QUEUES=critical,archive,high,low rake resque:work
-% Notice the archive queue - it is specialized and in our future architecture will only be run from a single machine.
-
-% At that point we'll start workers on our generalized background machines with this command:
-
-% $ QUEUES=critical,high,low rake resque:work
-% And workers on our specialized archive machine with this command:
-
-% $ QUEUE=archive rake resque:work
 
 \clearpage
 
