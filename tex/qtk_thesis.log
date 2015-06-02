@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.22)  2 JUN 2015 14:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.22)  2 JUN 2015 20:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -603,13 +603,63 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 File: ../figures/use_case.pdf Graphic file (type pdf)
 
 <use ../figures/use_case.pdf>
-Package pdftex.def Info: ../figures/use_case.pdf used on input line 32.
+Package pdftex.def Info: ../figures/use_case.pdf used on input line 33.
 (pdftex.def)             Requested size: 377.0066pt x 392.66502pt.
  [20
 
 
-] [21 <../figures/use_case.pdf>] [22] [23])
-[24] (./chapter_4.tex [25
+] [21 <../figures/use_case.pdf>] [22] [23]
+[24] <../figures/controller_class_dia.pdf, id=88, 484.81125pt x 370.38374pt>
+File: ../figures/controller_class_dia.pdf Graphic file (type pdf)
+
+<use ../figures/controller_class_dia.pdf>
+Package pdftex.def Info: ../figures/controller_class_dia.pdf used on input line
+ 193.
+(pdftex.def)             Requested size: 512.14963pt x 391.31631pt.
+ [25 <../figures/controller_class_dia.pdf>] <../figures/class_diagram_model.pdf
+, id=95, 413.545pt x 613.29124pt>
+File: ../figures/class_diagram_model.pdf Graphic file (type pdf)
+
+<use ../figures/class_diagram_model.pdf>
+Package pdftex.def Info: ../figures/class_diagram_model.pdf used on input line 
+201.
+(pdftex.def)             Requested size: 413.54398pt x 613.28973pt.
+
+<../figures/background_job_class.pdf, id=96, 309.155pt x 228.855pt>
+File: ../figures/background_job_class.pdf Graphic file (type pdf)
+
+<use ../figures/background_job_class.pdf>
+Package pdftex.def Info: ../figures/background_job_class.pdf used on input line
+ 211.
+(pdftex.def)             Requested size: 340.07153pt x 251.74126pt.
+
+<../figures/pdf_generator_class.pdf, id=97, 138.5175pt x 195.73125pt>
+File: ../figures/pdf_generator_class.pdf Graphic file (type pdf)
+
+<use ../figures/pdf_generator_class.pdf>
+Package pdftex.def Info: ../figures/pdf_generator_class.pdf used on input line 
+219.
+(pdftex.def)             Requested size: 138.51715pt x 195.73076pt.
+ [26] [27 <../figures/class_diagram_model.pdf>] [28 <../figures/background_job_
+class.pdf> <../figures/pdf_generator_class.pdf>]
+<../figures/generate_quiz_sequence.pdf, id=117, 459.7175pt x 173.64874pt>
+File: ../figures/generate_quiz_sequence.pdf Graphic file (type pdf)
+
+<use ../figures/generate_quiz_sequence.pdf>
+Package pdftex.def Info: ../figures/generate_quiz_sequence.pdf used on input li
+ne 252.
+(pdftex.def)             Requested size: 689.57455pt x 260.47247pt.
+
+<../figures/upload_quiz_sequence.pdf, id=118, 470.75874pt x 184.69pt>
+File: ../figures/upload_quiz_sequence.pdf Graphic file (type pdf)
+
+<use ../figures/upload_quiz_sequence.pdf>
+Package pdftex.def Info: ../figures/upload_quiz_sequence.pdf used on input line
+ 258.
+(pdftex.def)             Requested size: 706.1364pt x 277.03429pt.
+) [29] [30 <../figures/generate_quiz_sequence.pdf>] [31 <../figures/upload_quiz
+_sequence.pdf>] (./chapter_4.tex
+[32
 
 ]
 Underfull \hbox (badness 1939) in paragraph at lines 44--44
@@ -636,29 +686,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--51
 \OT1/cmr/m/n/12 Google, Face-book, LinkedIn,
  []
 
-[26] [27]
+[33] [34]
 Underfull \hbox (badness 10000) in paragraph at lines 109--109
 []\OT1/cmr/m/n/12 Duration
  []
 
-[28] [29] [30]) [31] [32] (./conclusions.tex [33
+[35] [36] [37]) [38] [39] (./conclusions.tex [40
 
-]) (./biblio.tex) [34
+]) (./biblio.tex) [41
 
 
 
 ]
-(./appendix.tex [35
+(./appendix.tex [42
 
 ]) (./qtk_thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 8276 strings out of 495028
- 119963 string characters out of 6181497
- 346873 words of memory out of 5000000
- 11302 multiletter control sequences out of 15000+600000
+ 8314 strings out of 495028
+ 121160 string characters out of 6181497
+ 345947 words of memory out of 5000000
+ 11334 multiletter control sequences out of 15000+600000
  8647 words of font info for 32 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 49i,15n,47p,1911b,1336s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 49i,15n,47p,1915b,1336s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.
@@ -669,10 +719,10 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on qtk_thesis.pdf (32 pages, 424113 bytes).
+Output written on qtk_thesis.pdf (39 pages, 2000751 bytes).
 PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
- 108 compressed objects within 2 object streams
+ 206 PDF objects out of 1000 (max. 8388607)
+ 143 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

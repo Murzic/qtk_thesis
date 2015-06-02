@@ -4,7 +4,7 @@
 \subsection{Domain Model}
 
 \subsubsection{Use Case Actors}
-The main actor that can be considered in this system is the \textit{user}, since no administrative accounts are available, nor are they considered necessary at this moment.
+The main actor that can be considered in this system is the \textit{user}, since no administrative accounts are available, nor are they considered necessary.
 \begin{itemize}
   \item User
   \begin{itemize}
@@ -26,7 +26,8 @@ The main actor that can be considered in this system is the \textit{user}, since
 
 
 \subsubsection{Use Case Diagram}
-The use case diagram given below \ref{use_case_diagram}, shows the main actions that can be performed by an user inside the application. There are six direct actions presented for this purpose. The first one and the last two, counting from top to bottom, represent the managing part of the application, which includes the courses, quizes and questions. They have been chosen as actions to be described here, because togethe they comprise a big part of the application's functionality. This managing method is similar to a simplistic file manager system. You can do the basic operations in each compartment: create, delete, rename and view. The next action is about \textit{student group} and \textit{students} managing. It was not grouped together with the previous actions, because it does not have a direct contact with them in the front-end designed for the users. It practically does the same operations upon the created instances. The \textit{generate quiz} action is one of the two most essential actions, that the QTK is heavily relying on. From the user's point of view it represents a button that is present in all of the quizes' view pages. It is used to generate ready to print quizes, devised for specific purposes, that the user has in mind. This action also covers the action of choosing the options for generating those particular quizes. The \textit{upload quiz} action, is the second most important action, that simply represents the uploading of the completed quizes' scans to the application. This upload though, chains to itself two other indirect actions, that occur immediately after it is finished. These are the \textit{process quiz} action, which as the name suggests, process the image that was uploaded, and the \textit{mark quiz} action, which use the data aquired from the processing to give a rating to that quiz's filling.
+The use case diagram \ref{use_case_diagram} presented below, shows the main actions that can be performed by an user inside the application. There are six direct actions presented for this purpose. The first one and the last two, counting from top to bottom, represent the managing part of the application, which includes the courses, quizes and questions. They have been chosen as actions to be described here, because togethe they comprise a big part of the application's functionality. This managing method is similar to a simplistic file manager system. You can do the basic operations in each compartment: create, delete, rename and view. The next action is about \textit{student group} and \textit{students} managing. It was not grouped together with the previous actions, because it does not have a direct contact with them in the front-end designed for the users. It practically does the same operations upon the created instances. The \textit{generate quiz} action is one of the two most essential actions, that the QTK is heavily relying on. From the user's point of view it represents a button that is present in all of the quizes' view pages. It is used to generate ready to print quizes, devised for specific purposes, that the user has in mind. This action also covers the action of choosing the options for generating those particular quizes. The \textit{upload quiz} action, is the second most important action, that simply represents the uploading of the completed quizes' scans to the application. This upload though, chains to itself two other indirect actions, that occur immediately after it is finished. These are the \textit{process quiz} action, which as the name suggests, process the image that was uploaded, and the \textit{mark quiz} action, which use the data aquired from the processing to give a rating to that quiz's filling.
+
 \begin{figure}[!ht]
 \centering
 \includegraphics[scale=1.2]{use_case}
@@ -184,3 +185,81 @@ The use case diagram given below \ref{use_case_diagram}, shows the main actions 
 \end{itemize}
 
 \subsection{Class Diagrams}
+
+The diagram illustrated below, in figure \ref{controller_class}, represents the gathering of all the controller classes which describe the business logic of the QTK application. It is designed to show the actions that each of the classes have available and the hierarchy of inheritance. Every controller class inherits from ApplicationController, which in turn inherits from ActionController::Base. The core of a Rails application web requests are the Action Controllers. The actions that they consist of, are public methods which are executed on request. These methods are usually linked to a ``view'' template, that can be rendered as soon as the action is requested. They also can redirect to other methods. The controllers' actions are made available to the server by Rails Routes, which map URLs to these actions. 
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{controller_class_dia}
+\caption{Controller class diagram}\label{controller_class}
+\end{figure}
+
+The class diagram presented in figure \ref{model_class}, denotes the Model layer in the MVC pattern. It holds the model classes which represent, in an abstract way, the database tables. These classes inherit from the ActiveRecord::Base class. ActiveRecord is an ORM Framework which connect application objects to RDBMS tables. ActiveRecord gives the possibilty to indicate the relationship between these classes. Independent row instances that are extracted from the database will be objects of these classes type. Variables have been indicated in each class, to reflect the fields of the tables, that have the same name as these classes. Model classes record the associations between them, which is equivalent to the ones on the database level. These associations help manipulating the database in a object-oriented fashion, through ActiveRecord. Most of the associations between the model classes are one-to-many compositions. Only two of the relations are many-to-many associations, which do not have an intermediary class for the table that unites them. It can be observed that when the composition relationships are followed, the User class is at the end of the link. So, this means that when a user is deleted, most of the other instances related to it, will be also deleted. 
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=1]{class_diagram_model}
+\caption{Model class diagram}\label{model_class}
+\end{figure}
+
+Since the processing of an image can take some time, it was necessary to make this as a separate process which runs in parallel. Thus, not making the web page to load for a indefinite amount of time when a bunch of images are being uploaded. The figure \ref{job_class}, which represents a class diagram of the classes related to background processing and image processing illustrates the relationship between them and the attributes and methods of the \textit{ScansProcessingJob} class. This class, or job is responsible for the uploaded images processing. Every method presented of the ScansProcessingJob, does a small part of the whole image processing. The \textit{perform} method is inherited from ActiveJob::Base and is a necessary part for the background processing to work. It utilizes and combines the other methods and integrate them into a single process, that evaluates uploaded images. 
+
+ActiveJob is a framework that uses queueing backends to make the jobs run asynchronously. There are a variety of these backends that can be used with ActiveJob. That's why ActiveJob has adapters available for each of these queueing backends. So, to put the diagram into words, a class which is considered a job, inherits from ActiveJob::Base class, the needed adapter class is used(in this case is used a Resque adapter: ActiveJob::QueueAdapters::ResqueAdapter), which also inherits from ActiveJob::Base. Now, this adapter is directly associated with the Resque libary. This gives the possibility of changing the queueing backend whenever necessary, without having to change the class implementation, which depicts the job. 
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=1.1]{background_job_class}
+\caption{Background job class diagram}\label{job_class}
+\end{figure}
+
+The generation of the pdf file containing the quizes, is handled by the QuizPdf class presented in figure \ref{pdf_class}. QuizPdf inherits from Prawn::Document class, which is a class belonging to the Prawn library(a pure Ruby pdf generation library). In this simple class diagram, it is shown the private attributes and the public methods of the QuizPdf class. The acquaintance and usage of the Prawn API was essential in the implementation of the quiz generation fragment of the thesis.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=1]{pdf_generator_class}
+\caption{Pdf generator class}\label{pdf_class}
+\end{figure}
+
+\subsubsection{Sequence Diagrams}
+The flow of logic of quiz generation and quiz uploading/processing will be introduced in figures \ref{generate_sequence} and \ref{upload_sequence}. The diagrams will be covered step by step, being guided by the sequence of the messages. The entities that interact with each other in the diagram are enumerated:
+\begin{enumerate} 
+  \item User
+  \item Application
+  \item GeneratedQuizzesController class
+  \item GeneratedQuizzesHelper class
+  \item Copy class
+  \item Database
+  \item QuizPdf class
+\end{enumerate}
+
+The logic behind the quiz's generation starts with the \textit{user} begining the generation process, by completing the necessary generation options in the application's web interface and submitting it to the server. The application's server identifies this request as a \textit{create} controller action belonging to GeneratedQuizzesController class, using Rails Routes. The create action is called and the options which denote the type of generation to be performed, are passed along. Inside the GenerateQuizzesController class create action, the method \textit{gen\_copies} of the helper module GeneratedQuizzesHelper will be called. This method contains the logic behind creating the necessary Copy class instances, based on the options selected by the user when generating quizzes. Based on the amount of copies to be created, the method has an iterative procedure of creating Copy instances, and saving them to the database. After the method finishes its execution, the pdf generation process is triggered, by instatiating a new QuizPdf object. When the pdf is ready, it is assigned to a variable in the ongoing action. This variable, containing the pdf file is then sent to the user and rendered in the browser. The user can now save the pdf file and print it.
+
+The second diagram has the following entities, that are fundamental for the quiz uploading process:
+\begin{enumerate}
+  \item User
+  \item Application
+  \item UsersController
+  \item ScannedQuiz class
+  \item Database
+  \item Worker
+  \item ScansProcessingJob class
+\end{enumerate}
+
+The process starts when the user uploads a set of image files through the application's web interface. The UsersController's upload action is commenced. Now, the upload action creates the ScannedQuiz instance for an image, which in its turn accesses the database and saves its image data. This is looped over, until all of the images are stored in the database. After ScannedQuiz instance is commited to the database, the ScansProcessingJob's \textit{perform\_later} method is called, providing the ScannedQuiz instance as argument. This method puts the argument data in a queue, that is going to be performed asynchronously. At the same time, a worker instance, which checks for jobs in the existent queues, every 5 seconds, needs to accesses them in the ScansProcessingJob class for the job. If a job is present, it is assigned to the worker that was the first to query for one. The worker performs the job and saves the results to the database in the process. When the job is finished, the worker queries for another one.
+
+\begin{sidewaysfigure}[!ht]
+\centering
+\includegraphics[scale=1.5]{generate_quiz_sequence}
+\caption{Quiz generating sequence diagram}\label{generate_sequence}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[!ht]
+\centering
+\includegraphics[scale=1.5]{upload_quiz_sequence}
+\caption{Quiz uploading sequence diagram}\label{upload_sequence}
+\end{sidewaysfigure}
+
+
+
+
+

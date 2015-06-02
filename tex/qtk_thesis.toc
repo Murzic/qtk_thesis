@@ -18,20 +18,21 @@
 \contentsline {subsubsection}{\numberline {2.1.1}Use Case Actors}{20}
 \contentsline {subsubsection}{\numberline {2.1.2}Use Case Diagram}{20}
 \contentsline {subsubsection}{\numberline {2.1.3}Use Cases Description}{21}
-\contentsline {subsection}{\numberline {2.2}Class Diagrams}{24}
-\contentsline {section}{\numberline {3}Economic Analysis}{25}
-\contentsline {subsection}{\numberline {3.1}Project Description}{25}
-\contentsline {subsection}{\numberline {3.2}SWOT Analysis}{26}
-\contentsline {subsection}{\numberline {3.3}Project time schedule}{26}
-\contentsline {subsubsection}{\numberline {3.3.1}Objectives}{26}
-\contentsline {subsubsection}{\numberline {3.3.2}Schedule}{27}
-\contentsline {subsection}{\numberline {3.4}Economical proof}{29}
-\contentsline {subsubsection}{\numberline {3.4.1}Tangible and intangible expenses}{29}
-\contentsline {subsubsection}{\numberline {3.4.2}Salary expenses}{29}
-\contentsline {subsubsection}{\numberline {3.4.3}Indirect Expenses}{30}
-\contentsline {subsubsection}{\numberline {3.4.4}Wear and Project Cost}{30}
-\contentsline {subsection}{\numberline {3.5}Management}{31}
-\contentsline {subsection}{\numberline {3.6}Economic conclusion}{32}
-\contentsline {section}{Conclusions}{33}
-\contentsline {section}{References}{34}
-\contentsline {section}{Appendix}{35}
+\contentsline {subsection}{\numberline {2.2}Class Diagrams}{25}
+\contentsline {subsubsection}{\numberline {2.2.1}Sequence Diagrams}{26}
+\contentsline {section}{\numberline {3}Economic Analysis}{32}
+\contentsline {subsection}{\numberline {3.1}Project Description}{32}
+\contentsline {subsection}{\numberline {3.2}SWOT Analysis}{33}
+\contentsline {subsection}{\numberline {3.3}Project time schedule}{33}
+\contentsline {subsubsection}{\numberline {3.3.1}Objectives}{33}
+\contentsline {subsubsection}{\numberline {3.3.2}Schedule}{34}
+\contentsline {subsection}{\numberline {3.4}Economical proof}{36}
+\contentsline {subsubsection}{\numberline {3.4.1}Tangible and intangible expenses}{36}
+\contentsline {subsubsection}{\numberline {3.4.2}Salary expenses}{36}
+\contentsline {subsubsection}{\numberline {3.4.3}Indirect Expenses}{37}
+\contentsline {subsubsection}{\numberline {3.4.4}Wear and Project Cost}{37}
+\contentsline {subsection}{\numberline {3.5}Management}{38}
+\contentsline {subsection}{\numberline {3.6}Economic conclusion}{39}
+\contentsline {section}{Conclusions}{40}
+\contentsline {section}{References}{41}
+\contentsline {section}{Appendix}{42}
