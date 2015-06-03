@@ -7,12 +7,11 @@
 \contentsline {subsection}{\numberline {1.4}Quick Response Codes}{13}
 \contentsline {subsubsection}{\numberline {1.4.1}QR Error Correction}{13}
 \contentsline {subsubsection}{\numberline {1.4.2}QR code sizes}{13}
-\contentsline {subsection}{\numberline {1.5}Tesseract}{15}
-\contentsline {subsection}{\numberline {1.6}Prawn}{15}
-\contentsline {subsection}{\numberline {1.7}Image Processing}{16}
-\contentsline {subsubsection}{\numberline {1.7.1}Chunky PNG}{16}
-\contentsline {subsubsection}{\numberline {1.7.2}Oily PNG}{17}
-\contentsline {subsection}{\numberline {1.8}Resque}{17}
+\contentsline {subsection}{\numberline {1.5}Prawn}{14}
+\contentsline {subsection}{\numberline {1.6}Image Processing}{15}
+\contentsline {subsubsection}{\numberline {1.6.1}Chunky PNG}{15}
+\contentsline {subsubsection}{\numberline {1.6.2}Oily PNG}{16}
+\contentsline {subsection}{\numberline {1.7}Resque}{17}
 \contentsline {section}{\numberline {2}System Design}{20}
 \contentsline {subsection}{\numberline {2.1}Use Cases}{20}
 \contentsline {subsubsection}{\numberline {2.1.1}Use Case Actors}{20}
