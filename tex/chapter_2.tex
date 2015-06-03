@@ -1,7 +1,7 @@
 \section{System Design}
 
 
-\subsection{Domain Model}
+\subsection{Use Cases}
 
 \subsubsection{Use Case Actors}
 The main actor that can be considered in this system is the \textit{user}, since no administrative accounts are available, nor are they considered necessary.
@@ -220,7 +220,7 @@ The generation of the pdf file containing the quizes, is handled by the QuizPdf 
 \caption{Pdf generator class}\label{pdf_class}
 \end{figure}
 
-\subsubsection{Sequence Diagrams}
+\subsection{Sequence Diagrams}
 The flow of logic of quiz generation and quiz uploading/processing will be introduced in figures \ref{generate_sequence} and \ref{upload_sequence}. The diagrams will be covered step by step, being guided by the sequence of the messages. The entities that interact with each other in the diagram are enumerated:
 \begin{enumerate} 
   \item User
@@ -258,6 +258,28 @@ The process starts when the user uploads a set of image files through the applic
 \includegraphics[scale=1.5]{upload_quiz_sequence}
 \caption{Quiz uploading sequence diagram}\label{upload_sequence}
 \end{sidewaysfigure}
+
+
+\subsection{Activity and State Diagrams}
+The activity and state diagrams will be used to present the processes: quiz generation\ref{generation_state} and quiz processing\ref{processing_activity}. Another aproach of visualizing these processes was performed, so that more perspective is added to the processes' analysis. 
+
+The quiz generation state diagram shows the different states the application's web interface is in, at different stages of the attempt to generate a quiz. The user does a sequence of actions, which takes him from the main page of the app, to the rendered pdf file. Down this course of actions, the user finds the app's web interface in certain states, which correspond to the actions made.
+
+The activity diagram takes the quiz processing through a list of activities and decision points. A begining state and final state is present. The diagram is designed to be in the system's point of view. It goes through processing the QR code, marker processing, marking of the test and persisting data to the database.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=1]{generate_quiz_state_dia}
+\caption{Quiz generation state diagram}\label{generation_state}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=1]{uml_quiz_processing_activity}
+\caption{Quiz processing activity diagram}\label{processing_activity}
+\end{figure}
+
+
 
 
 

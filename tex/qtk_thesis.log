@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.22)  2 JUN 2015 20:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.22)  3 JUN 2015 18:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -540,57 +540,56 @@ Package caption Info: End \AtBeginDocument code.
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 \c@lstlisting=\count183
- (./qtk_thesis.toc)
+ (./qtk_thesis.toc
+[4
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@toc=\write3
 \openout3 = `qtk_thesis.toc'.
 
-
-[4
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [5] (./introduction.tex
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
+ [5] (./introduction.tex (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-
+32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 ) [6
 
-] [7])
-(./chapter_1.tex [8
+] [7] [8])
+(./chapter_1.tex [9
 
 
-] [9] [10]
-<../figures/rails_MVC.pdf, id=29, 205.76875pt x 215.80624pt>
+] [10] [11]
+<../figures/rails_MVC.pdf, id=32, 205.76875pt x 215.80624pt>
 File: ../figures/rails_MVC.pdf Graphic file (type pdf)
 
 <use ../figures/rails_MVC.pdf>
-Package pdftex.def Info: ../figures/rails_MVC.pdf used on input line 118.
+Package pdftex.def Info: ../figures/rails_MVC.pdf used on input line 150.
 (pdftex.def)             Requested size: 246.92125pt x 258.96619pt.
- [11 <../figures/rails_MVC.pdf>] [12]
-<../figures/qr_v1.png, id=40, 250.9375pt x 250.9375pt>
+ [12] [13 <../figures/rails_MVC.pdf>] [14]
+<../figures/qr_v1.png, id=46, 250.9375pt x 250.9375pt>
 File: ../figures/qr_v1.png Graphic file (type png)
 
 <use ../figures/qr_v1.png>
-Package pdftex.def Info: ../figures/qr_v1.png used on input line 177.
+Package pdftex.def Info: ../figures/qr_v1.png used on input line 209.
 (pdftex.def)             Requested size: 245.82962pt x 245.8443pt.
 
-<../figures/qr_v40.png, id=41, 1003.75pt x 1003.75pt>
+<../figures/qr_v40.png, id=47, 1003.75pt x 1003.75pt>
 File: ../figures/qr_v40.png Graphic file (type png)
 
 <use ../figures/qr_v40.png>
-Package pdftex.def Info: ../figures/qr_v40.png used on input line 181.
+Package pdftex.def Info: ../figures/qr_v40.png used on input line 213.
 (pdftex.def)             Requested size: 245.82962pt x 245.82135pt.
- [13] [14 <../figures/qr_v1.png (PNG copy)> <../figures/qr_v40.png (PNG copy)>]
-
+ [15 <../figures/qr_v1.png (PNG copy)> <../figures/qr_v40.png (PNG copy)>]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2013/08/26 1.5b listings language file
-) [15] [16]
-[17] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+) [16] [17]
+[18] [19] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
-) [18] [19])
+) [20] [21])
 (./chapter_2.tex
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 13.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
@@ -599,25 +598,25 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 13.
 
-<../figures/use_case.pdf, id=68, 314.17375pt x 327.2225pt>
+<../figures/use_case.pdf, id=74, 314.17375pt x 327.2225pt>
 File: ../figures/use_case.pdf Graphic file (type pdf)
 
 <use ../figures/use_case.pdf>
 Package pdftex.def Info: ../figures/use_case.pdf used on input line 33.
 (pdftex.def)             Requested size: 377.0066pt x 392.66502pt.
- [20
+ [22
 
 
-] [21 <../figures/use_case.pdf>] [22] [23]
-[24] <../figures/controller_class_dia.pdf, id=88, 484.81125pt x 370.38374pt>
+] [23 <../figures/use_case.pdf>] [24] [25]
+[26] <../figures/controller_class_dia.pdf, id=94, 484.81125pt x 370.38374pt>
 File: ../figures/controller_class_dia.pdf Graphic file (type pdf)
 
 <use ../figures/controller_class_dia.pdf>
 Package pdftex.def Info: ../figures/controller_class_dia.pdf used on input line
  193.
 (pdftex.def)             Requested size: 512.14963pt x 391.31631pt.
- [25 <../figures/controller_class_dia.pdf>] <../figures/class_diagram_model.pdf
-, id=95, 413.545pt x 613.29124pt>
+ [27 <../figures/controller_class_dia.pdf>] <../figures/class_diagram_model.pdf
+, id=101, 413.545pt x 613.29124pt>
 File: ../figures/class_diagram_model.pdf Graphic file (type pdf)
 
 <use ../figures/class_diagram_model.pdf>
@@ -625,7 +624,7 @@ Package pdftex.def Info: ../figures/class_diagram_model.pdf used on input line
 201.
 (pdftex.def)             Requested size: 413.54398pt x 613.28973pt.
 
-<../figures/background_job_class.pdf, id=96, 309.155pt x 228.855pt>
+<../figures/background_job_class.pdf, id=102, 309.155pt x 228.855pt>
 File: ../figures/background_job_class.pdf Graphic file (type pdf)
 
 <use ../figures/background_job_class.pdf>
@@ -633,16 +632,16 @@ Package pdftex.def Info: ../figures/background_job_class.pdf used on input line
  211.
 (pdftex.def)             Requested size: 340.07153pt x 251.74126pt.
 
-<../figures/pdf_generator_class.pdf, id=97, 138.5175pt x 195.73125pt>
+<../figures/pdf_generator_class.pdf, id=103, 138.5175pt x 195.73125pt>
 File: ../figures/pdf_generator_class.pdf Graphic file (type pdf)
 
 <use ../figures/pdf_generator_class.pdf>
 Package pdftex.def Info: ../figures/pdf_generator_class.pdf used on input line 
 219.
 (pdftex.def)             Requested size: 138.51715pt x 195.73076pt.
- [26] [27 <../figures/class_diagram_model.pdf>] [28 <../figures/background_job_
+ [28] [29 <../figures/class_diagram_model.pdf>] [30 <../figures/background_job_
 class.pdf> <../figures/pdf_generator_class.pdf>]
-<../figures/generate_quiz_sequence.pdf, id=117, 459.7175pt x 173.64874pt>
+<../figures/generate_quiz_sequence.pdf, id=123, 459.7175pt x 173.64874pt>
 File: ../figures/generate_quiz_sequence.pdf Graphic file (type pdf)
 
 <use ../figures/generate_quiz_sequence.pdf>
@@ -650,16 +649,74 @@ Package pdftex.def Info: ../figures/generate_quiz_sequence.pdf used on input li
 ne 252.
 (pdftex.def)             Requested size: 689.57455pt x 260.47247pt.
 
-<../figures/upload_quiz_sequence.pdf, id=118, 470.75874pt x 184.69pt>
+<../figures/upload_quiz_sequence.pdf, id=124, 470.75874pt x 184.69pt>
 File: ../figures/upload_quiz_sequence.pdf Graphic file (type pdf)
 
 <use ../figures/upload_quiz_sequence.pdf>
 Package pdftex.def Info: ../figures/upload_quiz_sequence.pdf used on input line
  258.
 (pdftex.def)             Requested size: 706.1364pt x 277.03429pt.
-) [29] [30 <../figures/generate_quiz_sequence.pdf>] [31 <../figures/upload_quiz
-_sequence.pdf>] (./chapter_4.tex
-[32
+
+<../figures/generate_quiz_state_dia.pdf, id=125, 191.71625pt x 189.70876pt>
+File: ../figures/generate_quiz_state_dia.pdf Graphic file (type pdf)
+
+<use ../figures/generate_quiz_state_dia.pdf>
+Package pdftex.def Info: ../figures/generate_quiz_state_dia.pdf used on input l
+ine 272.
+(pdftex.def)             Requested size: 191.71577pt x 189.70828pt.
+
+<../figures/uml_quiz_processing_activity.pdf, id=126, 174.6525pt x 322.20375pt>
+File: ../figures/uml_quiz_processing_activity.pdf Graphic file (type pdf)
+<use ../figures/uml_quiz_processing_activity.pdf>
+Package pdftex.def Info: ../figures/uml_quiz_processing_activity.pdf used on in
+put line 278.
+(pdftex.def)             Requested size: 174.65207pt x 322.20296pt.
+) [31] [32 <../figures/generate_quiz_sequence.pdf>] [33 <../figures/upload_quiz
+_sequence.pdf>] [34 <../figures/generate_quiz_state_dia.pdf> <../figures/uml_qu
+iz_processing_activity.pdf>]
+(./chapter_3.tex
+<../figures/main_page_mockup.pdf, id=152, 940.51375pt x 653.44125pt>
+File: ../figures/main_page_mockup.pdf Graphic file (type pdf)
+
+<use ../figures/main_page_mockup.pdf>
+Package pdftex.def Info: ../figures/main_page_mockup.pdf used on input line 31.
+
+(pdftex.def)             Requested size: 460.93153pt x 320.23886pt.
+
+<../figures/quiz_generate_mockup.pdf, id=153, 940.51375pt x 653.44125pt>
+File: ../figures/quiz_generate_mockup.pdf Graphic file (type pdf)
+
+<use ../figures/quiz_generate_mockup.pdf>
+Package pdftex.def Info: ../figures/quiz_generate_mockup.pdf used on input line
+ 37.
+(pdftex.def)             Requested size: 460.93153pt x 320.23886pt.
+ [35
+
+]
+Overfull \vbox (2.79079pt too high) has occurred while \output is active []
+
+
+[36 <../figures/main_page_mockup.pdf> <../figures/quiz_generate_mockup.pdf>]
+<../figures/main_page_qtk.png, id=166, 1187.43625pt x 442.65375pt>
+File: ../figures/main_page_qtk.png Graphic file (type png)
+
+<use ../figures/main_page_qtk.png>
+Package pdftex.def Info: ../figures/main_page_qtk.png used on input line 47.
+(pdftex.def)             Requested size: 460.93153pt x 171.82373pt.
+
+<../figures/generate_quiz_qtk.png, id=167, 1187.43625pt x 691.58376pt>
+File: ../figures/generate_quiz_qtk.png Graphic file (type png)
+
+<use ../figures/generate_quiz_qtk.png>
+Package pdftex.def Info: ../figures/generate_quiz_qtk.png used on input line 53
+.
+(pdftex.def)             Requested size: 460.93153pt x 268.45026pt.
+ (../src/new.html.haml [37 <../figures/main_page_qtk.png> <../figures/generate_
+quiz_qtk.png>]) (../src/question.rb
+[38]) (../src/students_controller.rb) (../src/create_answers.rb) [39] [40]
+(../src/set_header.rb [41]) (../src/scanned_quiz.rb) (../src/read_qr.rb
+[42]) [43]) (./chapter_4.tex [44
+
 
 ]
 Underfull \hbox (badness 1939) in paragraph at lines 44--44
@@ -686,43 +743,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--51
 \OT1/cmr/m/n/12 Google, Face-book, LinkedIn,
  []
 
-[33] [34]
+[45] [46]
 Underfull \hbox (badness 10000) in paragraph at lines 109--109
 []\OT1/cmr/m/n/12 Duration
  []
 
-[35] [36] [37]) [38] [39] (./conclusions.tex [40
+[47] [48] [49]) [50] [51] (./conclusions.tex [52
 
-]) (./biblio.tex) [41
+]) (./biblio.tex) [53
 
 
 
 ]
-(./appendix.tex [42
+(./appendix.tex [54
 
-]) (./qtk_thesis.aux) ) 
+]) (./qtk_thesis.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 8314 strings out of 495028
- 121160 string characters out of 6181497
- 345947 words of memory out of 5000000
- 11334 multiletter control sequences out of 15000+600000
+ 8538 strings out of 495028
+ 124985 string characters out of 6181497
+ 394045 words of memory out of 5000000
+ 11525 multiletter control sequences out of 15000+600000
  8647 words of font info for 32 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 49i,15n,47p,1915b,1336s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on qtk_thesis.pdf (39 pages, 2000751 bytes).
+ 49i,15n,47p,1915b,1772s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmtt12.pfb>
+Output written on qtk_thesis.pdf (51 pages, 2385974 bytes).
 PDF statistics:
- 206 PDF objects out of 1000 (max. 8388607)
- 143 compressed objects within 2 object streams
+ 262 PDF objects out of 1000 (max. 8388607)
+ 177 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -3,6 +3,38 @@
 
 \subsection{Problem Definition}
 
+When designing the application, the main aim was to create a useful tool that supports the
+e-learning implementation in higher educational institutions. The app should result into 
+an educational instrument, that’s why, Quiz ToolKit was set to be an easy to use system 
+which automates the managing of quizes with no need of expensive e-testing equipment. 
+The main prerogatives of the app agenda were: quiz generation, quiz exporting, quiz scanning, 
+and data processing. The problem is to accomplish these phases. 
+
+The first one, quiz generation, deals with the direct interaction of the human (our case 
+lecturer) with the technology (QTK). The academic staff is naturally reluctant to change their 
+methods of teaching and learning without a deep understanding of why and how and what 
+will be the impact in terms of quality and any resultant benefits. That is why it was 
+important to make the app able to offer the users various options for quiz 
+generation. Another important point was to keep the interface simple, at the same time 
+easy to understand and use. Important to notice, that the final form of the quiz contains 
+not only the quiz text, but distinctive reference markers (circles) and a QR code. These are 
+essential for the successive phases. The markers should serve as location references and 
+QR codes should store the id of each copy and the current page of the generated quiz copy.
+
+Quiz exporting represents the phase when the quizes are getting a physical shape. The 
+questions/answer keys previously introduced manually by lecturer and organized 
+automatically into single/individual quizes by the app are being printed out in hard 
+copies. The format should meet the printing requirements, be readable and clear. 
+
+The third issue, quiz scan, implies the use of a scanner. For hundreds of quizes there is a 
+need of a fast scanner that can quickly and accurate process the hard copies of the tests. 
+An important point is the scan quality on which depends the next phase: data . 
+
+The final issue, data analyzing, is completely automatic. In this phase the app should process 
+the information using the elements added to the quiz pages earlier. The program should use the 
+reference marks to depict correct the position of the answers, in case of scan inaccuracy (page rotation and translation) and read the QR code to collect the copy data. Also, an evaluation criteria should be developed 
+in order to get an instant feedback of the results.
+
 \subsection{REST}
 REST (Representational State Transfer) relies on a stateless, client-server architecture that uses the HTTP protocol in the most cases.
 REST is an architecture style used in the development of Web services. Instead of using complex mechanisms such as CORBA, RPC or SOAP to connect between devices, REST is preffered as a way for the devices to communicate.
