@@ -76,6 +76,22 @@
 \renewcommand{\labelenumii}{\theenumii )}
 \renewcommand{\labelenumiii}{ --)}
 
+\let\oldenumerate\enumerate
+\renewcommand{\enumerate}{
+  \oldenumerate
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}
+
+\let\olditemize\itemize
+\renewcommand{\itemize}{
+  \olditemize
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}
+
 \numberwithin{equation}{section}
 
 \pagestyle{fancy}
