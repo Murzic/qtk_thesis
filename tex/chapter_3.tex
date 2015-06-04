@@ -2,78 +2,87 @@
 \phantomsection
 The initial step that was done, was the understanding of the purpose of the application. Different ideas had to be analyzed and decisions were made whether they should be included in the application or not. From the remaining set of ideas, some of them were labeled as a high priority and the others were decided to be considered as optional. Actually, this was done in order to set the developer on the right objectives. The high priority ideas, were considered essential for the application's main purpose. Given the time limit and the unforseen factors that could affect it, the most important tasks were to be developed first, leaving the other ones to be executed if there was time left. So, before beginning the implementation, QTK was conceptually divided into four main distinctive fragments:
 \begin{enumerate}
-  \item {User interface}
-  \item {Quiz Managing}
-  \item {Quiz generation}
-  \item {Quiz processing}
+  \item {User interface};
+  \item {Quiz Managing};
+  \item {Quiz generation};
+  \item {Quiz processing}.
 \end{enumerate}
 
 These four elements of QTK will be amply described later in this chapter.
 
-Ruby on Rails was the framework used in developing the web application. The default SQLite database which was included in the generated Rails application, was considered to be sufficient for our purposes and no other alternatives were searched. The following list of possibly to be used technologies was considered:
+Ruby on Rails was the framework used in developing the web application. The default SQLite \cite{sqlite_doc} database, which was included in the generated Rails application, was considered to be sufficient for this thesis purpose and no other alternatives were searched. The following list of possibly to be used technologies was considered:
 \begin{enumerate}
-  \item Camellia
-  \item OpenCV
-  \item Tesseract
-  \item rqrcode
-  \item qrencoder
-  \item qrio
-  \item zxing
-  \item qrdecoder
+  \item Camellia;
+  \item OpenCV;
+  \item Tesseract;
+  \item RMagick;
+  \item ZBar;
+  \item rqrcode;
+  \item qrencoder;
+  \item qrio;
+  \item zxing;
+  \item sidekiq;
+  \item qrdecoder.
 \end{enumerate}
-Due to different reasons, none of these technologies were used in the final version of the application.
+Due to different reasons, most of these technologies were not used in the final version of the application to that is presented.
 
 \subsection{User Interface}
-The first step in creating the user interface, was to create the sketches of some of the web pages. The mockflow web app \cite{mockflow} was used for this purpose. The figures \ref{main_page_mockup} and \ref{quiz_generate_mockup} are the mockups based on which the real front-end was created.
+The first step in creating the user interface, was to create the sketches of some of the web pages. The mockflow web app was used for this purpose. The figures \ref{fig3.1a} and \ref{fig3.1b} are the mockups based on which the real front-end was created.
 
 \begin{figure}[!ht]
-\centering
-\includegraphics[width=0.9\textwidth]{main_page_mockup}
-\caption{QTK's main page mockup}\label{main_page_mockup}
+  \centering
+  \subfloat[QTK's main page mockup\label{fig3.1a}]{%    
+    \includegraphics[width=0.94\textwidth]{main_page_mockup}    
+  }
+ \hspace{0.09cm}
+  \subfloat[QTK's quiz generation page mockup\label{fig3.1b}]{%
+    \includegraphics[width=0.94\textwidth]{quiz_generate_mockup}
+  }
+  \caption{QTK's main page mockup (a), quiz generation page mockup (b).}
+  \label{fig1.1}
 \end{figure}
+
+
+Bootstrap framework was used in developing the front-end of the application. Figures \ref{fig3.2a} and \ref{fig3.2b} illustrate the application of this framework in the QTK's user interface.
+
 
 \begin{figure}[!ht]
-\centering
-\includegraphics[width=0.9\textwidth]{quiz_generate_mockup}
-\caption{QTK's quiz generation page mockup}\label{quiz_generate_mockup}
+  \centering
+  \subfloat[QTK's main page\label{fig3.2a}]{%    
+    \includegraphics[width=0.94\textwidth]{main_page_qtk}    
+  }
+ \hspace{0.09cm}
+  \subfloat[QTK's generate quiz page\label{fig3.2b}]{%
+    \includegraphics[width=0.94\textwidth]{generate_quiz_qtk}
+  }
+  \caption{QTK's main page (a), generate quiz page (b).}
+  \label{fig1.1}
 \end{figure}
 
 
-Bootstrap\cite{bootstrap} framework was used in developing the front-end of the application. Figures \ref{main_page_qtk} and \ref{generate_quiz_qtk} illustrate the application of this framework in the QTK's user interface.
 The View layer, contain the templates, which are of ``Haml'' format(the default format is ``erb''). They constitute the interface which is displayed to the user. The contents can be text, images, tables, videos, hyperlinks and other elements which give the user the possibility to interact with the system. A haml formatted template which uses Bootstrap with CSS, HTML and JavaScript for styling is exemplified in listing \ref{new_question_haml}.
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=0.9\textwidth]{main_page_qtk}
-\caption{QTK's main page}\label{main_page_qtk}
-\end{figure}
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=0.9\textwidth]{generate_quiz_qtk}
-\caption{QTK's quiz view page mockup}\label{generate_quiz_qtk}
-\end{figure}
 
 \lstinputlisting[language=Ruby, caption={Template \textit{new.html.haml} corresponding to action \textit{new} of QuestionsController}, label=new_question_haml]{../src/new.html.haml}
 
 \subsection{Quiz managing}
 Quiz managing covers a list of things:
 \begin{itemize}
-  \item Course creation, renaming and deletion
-  \item Quiz creation, renaming and deletion
-  \item Question creation, editing and deletion
-  \item Answer creation, editing and deletion
-  \item Question group creation and deletion
+  \item Course creation, renaming and deletion;
+  \item Quiz creation, renaming and deletion;
+  \item Question creation, editing and deletion;
+  \item Answer creation, editing and deletion;
+  \item Question group creation and deletion.
 \end{itemize}
 
 These items, combined together, make the management system specific to QTK. They are implemented using the Rails framework and use all the layers proprietary to it. The model layer is used to create the classes representing the objects defined as course, quiz, question, answer and question group. A Model layer Question class example is given in listing \ref{question_class}.
 The Controller, which serves as a bridge between the View and the Model layers contains the actions which react to the incoming requests. In listing \ref{students_class} is shown the StudentsController class. 
 
-There is another type of classes which should be mentioned. These are the migration classes, which inherit from the ActiveRecord::Migration class. The CreateAnswers class \ref{create_answers}, for example, is designed to create the table \textit{answers} in the database, with the specified fields. In this migration, is also indicated the foreign key of the table \textit{questions} which announces the relationship between these tables.
-
 \lstinputlisting[language=Ruby, caption={Question class}, label=question_class]{../src/question.rb}
 
 \lstinputlisting[language=Ruby, caption={StudentsController class}, label=students_class]{../src/students_controller.rb}
+
+There is another type of classes which must be mentioned. The migration type classes inherit from the ActiveRecord::Migration class. The CreateAnswers class \ref{create_answers}, for example, is designed to create the table \textit{answers} in the database, with the specified fields. In this class, is indicated the foreign key of the table \textit{questions} which announces the relationship between these tables.
+
 
 \lstinputlisting[language=Ruby, caption={CreateAnswers class}, label=create_answers]{../src/create_answers.rb}
 
@@ -95,18 +104,19 @@ def create
 end
 \end{lstlisting}
 
-The \textit{GeneratedQuizzesHelper} module has a method named \textit{gen\_copies}, which is responsible for creating the necessary Copy class instances and persist them to the database, based on the options the user had chosen earlier. The necessity to create a separate method inside this module was because this process has its specific logic, which shouldn't be exposed in the controller action directly. By this, it is meant that some of the options were complementary, others were not. For example, the \textit{number of copies} option is interfering with the \textit{student group} option, because the second option's purpose is to create quiz copies based on the student's names, which in turn result in a determined number of final copies. Another option interference is the \textit{versions number} and the \textit{random} options. By selecting the number of versions to be generated for a quiz, it implies that each version will have the questions randomly sorted. So, once again, the other option becomes unnecessary to be selected.
+The \textit{GeneratedQuizzesHelper} module has a method named \textit{gen\_copies}, which is responsible for creating the necessary Copy class instances and persist them to the database, based on the options the user had chosen earlier. These options are contained in the variable passed as an arguement to this method. The necessity to create a separate method inside this module was because this process has its specific logic, which shouldn't be exposed in the controller action directly. By this, it is meant that some of the options were complementary, others were not. For example, the \textit{number of copies} option is interfering with the \textit{student group} option, because the second option's purpose is to create quiz copies based on the student's names, which in turn result in a determined number of final copies. Another option interference is the \textit{versions number} and the \textit{random} options. By selecting the number of versions to be generated for a quiz, it implies that each version will have the questions randomly sorted. So, once again, the other option becomes unnecessary to be selected.
 
 The biggest role in the \textit{quiz generation} process has the \textit{QuizPdf} class. This class inherits from the \textit{Prawn::Document} class. It uses the Prawn's API to render all the required elements on the page. Here is a list of those elements: 
 \begin{itemize}
-  \item Questions
-  \item Answers
-  \item Squares next to the answers
-  \item Title
-  \item Student name and group
-  \item QR code
-  \item Markers(circles) in each corner
-  \item Page number
+  \item Questions;
+  \item Answers;
+  \item Squares next to the answers;
+  \item The title
+  \item Student name 
+  \item Student group;
+  \item QR code;
+  \item Markers(circles) in each corner;
+  \item Page number.
 \end{itemize}
 
 The \textit{set\_header} presented in listing \ref{set_header} of the \textit{QuizPdf} class is responsible for the QR code generation, title, student name, student group name and page number rendering and the stroking of the markers. 
@@ -117,7 +127,7 @@ The \textit{set\_header} presented in listing \ref{set_header} of the \textit{Qu
 The QR code is used to store some information in order to easily read it afterwards. In our case, the copy id of the \textit{Copy} class instance 
 is encoded in the QR code. Also the current page number of the copy is stored in the QR code. This information will be critical in the later image processing part of the QTK's implementation. 
 
-The markers, which are positioned at corners of the page, are circles with a 10 pixel radius on a 612x792 resolution pdf page. They are also going to be used in the image processing part, by using them as pivots when searching for the answer squares' coordinates.
+The markers, which are positioned at each corner of the generated quiz's page, are circles having a 10 pixel radius and a offset from the page's margins of 26 pixels on a 612x792 resolution pdf page. They are also going to be utilized in the image processing part, by using them as pivots when searching for the answer squares' coordinates.
 
 The \textit{set\_questions} method is responsible for rendering the questions' and the answers' text. But, besides that, it draws the answers' squares, that are used by the students to select an answer when taking the quiz. Another thing related to the image processing is also being prepared at this point and that is the storing the ids of the questions and answers and the squares' left-top corner coordinates into a hash. At the end of the \textit{QuizPdf's} class execution, this hash is stored in the database in the copies table through the Copy class model. It is stored in the \textit{squares\_xy} field of that table.
 
@@ -126,7 +136,7 @@ After the \textit{QuizPdf} class instance is created and assigned to a variable,
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=\textwidth]{generated_quiz}
-\caption{A generated quiz's page example}\label{qenerated_quiz_page}
+\caption{A generated quiz's page example}\label{generated_quiz_page}
 \end{figure}
 
 

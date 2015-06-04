@@ -24,20 +24,20 @@
 \contentsline {subsection}{\numberline {3.1}User Interface}{36}
 \contentsline {subsection}{\numberline {3.2}Quiz managing}{39}
 \contentsline {subsection}{\numberline {3.3}Quiz Generation}{40}
-\contentsline {subsection}{\numberline {3.4}Quiz Processing}{42}
-\contentsline {section}{\numberline {4}Economic Analysis}{49}
-\contentsline {subsection}{\numberline {4.1}Project Description}{49}
-\contentsline {subsection}{\numberline {4.2}SWOT Analysis}{50}
-\contentsline {subsection}{\numberline {4.3}Project time schedule}{50}
-\contentsline {subsubsection}{\numberline {4.3.1}Objectives}{50}
-\contentsline {subsubsection}{\numberline {4.3.2}Schedule}{50}
-\contentsline {subsection}{\numberline {4.4}Economical proof}{52}
-\contentsline {subsubsection}{\numberline {4.4.1}Tangible and intangible expenses}{52}
-\contentsline {subsubsection}{\numberline {4.4.2}Salary expenses}{53}
-\contentsline {subsubsection}{\numberline {4.4.3}Indirect Expenses}{54}
-\contentsline {subsubsection}{\numberline {4.4.4}Wear and Project Cost}{54}
-\contentsline {subsection}{\numberline {4.5}Management}{55}
-\contentsline {subsection}{\numberline {4.6}Economic conclusion}{55}
-\contentsline {section}{Conclusions}{57}
-\contentsline {section}{References}{59}
-\contentsline {section}{Appendix}{60}
+\contentsline {subsection}{\numberline {3.4}Quiz Processing}{44}
+\contentsline {section}{\numberline {4}Economic Analysis}{50}
+\contentsline {subsection}{\numberline {4.1}Project Description}{50}
+\contentsline {subsection}{\numberline {4.2}SWOT Analysis}{51}
+\contentsline {subsection}{\numberline {4.3}Project time schedule}{51}
+\contentsline {subsubsection}{\numberline {4.3.1}Objectives}{51}
+\contentsline {subsubsection}{\numberline {4.3.2}Schedule}{51}
+\contentsline {subsection}{\numberline {4.4}Economical proof}{53}
+\contentsline {subsubsection}{\numberline {4.4.1}Tangible and intangible expenses}{53}
+\contentsline {subsubsection}{\numberline {4.4.2}Salary expenses}{54}
+\contentsline {subsubsection}{\numberline {4.4.3}Indirect Expenses}{55}
+\contentsline {subsubsection}{\numberline {4.4.4}Wear and Project Cost}{55}
+\contentsline {subsection}{\numberline {4.5}Management}{56}
+\contentsline {subsection}{\numberline {4.6}Economic conclusion}{56}
+\contentsline {section}{Conclusions}{58}
+\contentsline {section}{References}{60}
+\contentsline {section}{Appendix}{61}
