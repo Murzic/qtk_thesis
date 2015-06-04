@@ -119,7 +119,7 @@ The biggest role in the \textit{quiz generation} process has the \textit{QuizPdf
   \item Page number.
 \end{itemize}
 
-The \textit{set\_header} presented in listing \ref{set_header} of the \textit{QuizPdf} class is responsible for the QR code generation, title, student name, student group name and page number rendering and the stroking of the markers. 
+The \textit{set\_header} method presented in listing \ref{set_header} of the \textit{QuizPdf} class is responsible for the QR code generation, title, student name, student group name and page number rendering and the stroking of the markers. 
 
 
 \lstinputlisting[language=Ruby, caption={QuizPdf's \textit{set\_header} method}, label=set_header]{../src/set_header.rb}
@@ -129,7 +129,7 @@ is encoded in the QR code. Also the current page number of the copy is stored in
 
 The markers, which are positioned at each corner of the generated quiz's page, are circles having a 10 pixel radius and a offset from the page's margins of 26 pixels on a 612x792 resolution pdf page. They are also going to be utilized in the image processing part, by using them as pivots when searching for the answer squares' coordinates.
 
-The \textit{set\_questions} method is responsible for rendering the questions' and the answers' text. But, besides that, it draws the answers' squares, that are used by the students to select an answer when taking the quiz. Another thing related to the image processing is also being prepared at this point and that is the storing the ids of the questions and answers and the squares' left-top corner coordinates into a hash. At the end of the \textit{QuizPdf's} class execution, this hash is stored in the database in the copies table through the Copy class model. It is stored in the \textit{squares\_xy} field of that table.
+The \textit{set\_questions} method is responsible for rendering the questions' and the answers' text. But, besides that, it draws the answers' squares, that are used by the students to select an answer when taking the quiz. Another thing related to the image processing is also being prepared at this point and that is the storing the ids of the questions and answers and the squares' left-top corner coordinates into a hash. At the end of the \textit{QuizPdf's} class execution, this hash is stored in the database in the copies table through the Copy class model. The \textit{squares\_xy} field of that table is used to store that hash.
 
 After the \textit{QuizPdf} class instance is created and assigned to a variable, that instance is rendered into a pdf file in the web browser. Figure \ref{generated_quiz_page} shows an example of a generated quiz page. 
 
@@ -156,13 +156,12 @@ The \textit{find\_marker} method shown in listing \ref{find_marker}, of the job 
 
 \lstinputlisting[language=Ruby, caption={\textit{find\_marker} method}, label=find_marker]{../src/find_marker.rb}
 
-Based on the found coodinates of the markers, the angle the page content is rotated can be calculated. First, the center coordinates of the bottom left and top left markers must be computed. These coordinates are passed to the \textit{rotation\_detection} method from listing \ref{rotation_detection}, which is responsible for getting the angle. The formula \ref{3.1} was used for computing the \textit{cosine} of $\alpha$ by using the vector's $v$ coordinates of the line formed by the centers of the two markers and vector $u$ which has the same $y$ value for all $x$.
+Based on the found coodinates of the markers, the angle the page content is rotated can be calculated. First, the center coordinates of the bottom left and top left markers must be computed. These coordinates are passed to the \textit{rotation\_detection} method from listing \ref{rotation_detection}, which is responsible for getting the angle. The formula \ref{3.1} \cite{cosalpha} was used for computing the \textit{cosine} of $\alpha$ by using the vector's $v$ coordinates of the line formed by the centers of the two markers and vector $u$ which has the same $y$ value for all $x$.
 
 \begin{equation}
 \cos \alpha = \frac{\left\vert u_{1} \cdot v_{1} + u_{2} \cdot v_{2} \right\vert }{\sqrt{u_{1}^{2}+u_{2}^{2}} \cdot \sqrt{v_{1}^{2}+v_{2}^{2}}}  \label{3.1}
 \end{equation}
-
-where $u_{1}$ and $v_{1}$ represent the $x$ coordinates and $u_{2}$ and $v_{2}$ represent the $y$ coordinates of the vectors $v$ and $u$.
+where $u_{1}$ and $v_{1}$ represent the $x$ coordinates, respectively, the $u_{2}$ and $v_{2}$ represent the $y$ coordinates of the vectors $v$ and $u$.
 
 Since the angle is needed to be specified in radians, formula \ref{3.2} gets us the needed result.
 \begin{equation}
@@ -178,7 +177,7 @@ degrees = \frac{\arccos \cos \alpha \cdot 180}{\pi} \label{3.3}
 \lstinputlisting[language=Ruby, caption={\textit{rotation\_detection} method}, label=rotation_detection]{../src/rotation_detection.rb}
 
 
-A part of the method \textit{answers\_processing} provided in listing \ref{answers_processing}, which uses data obtained from the previously mentioned methods, contains the logic behind identifying whether a certain square was marked or not in the scanned copy of the quiz. The \textit{copies} table's \textit{square\_xy} field's data is used to get the necessarry coordinates for each answer's square. Due to the possibility of the images' contents to be rotated to a certain degree, formulas \ref{3.4} and \ref{3.5}, which represent the rotation of a point in respect to (0, 0) point on the XY axis. where used to recalculate the current x and y coordinates of the square. 
+A part of the method \textit{answers\_processing} provided in listing \ref{answers_processing}, which uses data obtained from the previously mentioned methods, contains the logic behind identifying whether a certain square was marked or not in the scanned copy of the quiz. The \textit{copies} table's \textit{square\_xy} field's data is used to get the necessarry coordinates for each answer's square. Due to the possibility of the images' contents to be rotated to a certain degree, formulas \ref{3.4} and \ref{3.5}, which represent the rotation of a point in respect to (0, 0) point on the XY axis, \cite{point_rotation}. where used to recalculate the current x and y coordinates of the square. 
 
 \begin{equation}
 x^{\prime} = x \cos \phi - y \sin \phi \label{3.4}
@@ -187,10 +186,9 @@ x^{\prime} = x \cos \phi - y \sin \phi \label{3.4}
 \begin{equation}
 y^{\prime} = y \cos \phi + x \sin \phi \label{3.5}
 \end{equation}
-
 where $\phi$ is the angle in radians calculated in formula \ref{3.2}
 
-The pixels contained inside each square, are stored inside of an array. This is done using the \textit{ChunkyPNG's} possibility to access the images' pixels. Then the number of white and black pixels is calculated. The ratio black/white ratio number is used to determine whether the square was marked as anwer by the student or not. Squares which have the \textit{bw\_ratio} above 1 are considered as marked and are stored in another array that will be used in calculating the percentage of the correctly given answers.
+The pixels contained inside each square, are stored inside of an array. This is done using the \textit{ChunkyPNG's} possibility to access the images' pixels. After that. the number of white and black pixels is calculated. The ratio black/white ratio number is used to determine whether the square was marked as anwer by the student or not. Squares which have the \textit{bw\_ratio} above 1 are considered as marked and are stored in another array that will be used in calculating the percentage of the correctly given answers.
 
 \lstinputlisting[language=Ruby, caption={\textit{answers\_processing} method snippet}, label=answers_processing]{../src/answers_processing.rb}
 

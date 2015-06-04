@@ -11,10 +11,8 @@ def perform(scanned_quiz)
   else
     raise "QR code wasn't decoded!"
   end
-
   answers_processing()
   if @answers
-    puts "Saving checked answers"
     if @copy_answers
       @copy.answers = @copy_answers | @answers
     else

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.22)  5 JUN 2015 01:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.22)  5 JUN 2015 01:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -728,8 +728,8 @@ Package pdftex.def Info: ../figures/generated_quiz.pdf used on input line 138.
  [43 <../figures/generated_quiz.pdf>]
 (../src/scanned_quiz.rb) (../src/read_qr.rb [44]) (../src/find_marker.rb)
 [45] (../src/rotation_detection.rb) [46] (../src/answers_processing.rb)
-(../src/quiz_marking.rb [47]) (../src/perform.rb [48]) [49]) (./chapter_4.tex
-[50
+(../src/quiz_marking.rb [47]) (../src/perform.rb) [48]) (./chapter_4.tex
+[49
 
 
 ]
@@ -757,19 +757,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--51
 \OT1/cmr/m/n/12 Google, Face-book, LinkedIn,
  []
 
-[51] [52]
+[50] [51]
 Underfull \hbox (badness 10000) in paragraph at lines 109--109
 []\OT1/cmr/m/n/12 Duration
  []
 
-[53] [54] [55]) [56] [57] (./conclusions.tex [58
+[52] [53] [54]) [55] [56] (./conclusions.tex [57
 
-] [59]) (./biblio.tex) [60
+] [58]) (./biblio.tex) [59
 
 
 
 ]
-(./appendix.tex [61
+(./appendix.tex [60
 
 ]) (./qtk_thesis.aux)
 
@@ -777,10 +777,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8638 strings out of 495028
- 126159 string characters out of 6181497
- 422272 words of memory out of 5000000
- 11612 multiletter control sequences out of 15000+600000
+ 8640 strings out of 495028
+ 126185 string characters out of 6181497
+ 422280 words of memory out of 5000000
+ 11614 multiletter control sequences out of 15000+600000
  8647 words of font info for 32 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  49i,15n,47p,1937b,1776s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -796,10 +796,10 @@ fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
 12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on qtk_thesis.pdf (54 pages, 2430853 bytes).
+Output written on qtk_thesis.pdf (53 pages, 2430390 bytes).
 PDF statistics:
- 287 PDF objects out of 1000 (max. 8388607)
- 194 compressed objects within 2 object streams
+ 284 PDF objects out of 1000 (max. 8388607)
+ 192 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -22,7 +22,6 @@ def quiz_marking
     end
   end
   mark = points.fdiv(total)*100
-  ## Updating mark field in copies table
   @copy.mark = mark
   @copy.save
   mark
