@@ -81,7 +81,19 @@ There is another type of classes which should be mentioned. These are the migrat
 \subsection{Quiz Generation}
 Two gems(libraries) were additionally used to implement the ``quiz generation'' part of the application: Strokes and Prawn. Strokes is used to generate the QR codes and Prawn is used to generate the PDF files. The main idea was to give the user the possibility to generate the quizzes in different ways. So, options were provided for this purpose. Quizzes can be generated based on the chosen student groups, so the generated pdf would have copies created specifically for each student of those student groups. Or, the \textit{random} option can be choosed so the questions in every copy would be arranged in a random fashion.
 
-When the user chooses to generate a quiz pdf, he selects the options he wants and sends the request to the server. Here, the \textit{GeneratedQuizzesController} class, which is responsible for catching this specific request, uses the \textit{create} \ref{create_method} method to commence the generation process in the backend. 
+When the user chooses to generate a quiz pdf, he selects the options he wants and sends the request to the server. Here, the \textit{GeneratedQuizzesController} class, which is responsible for catching this specific request, uses the \textit{create} method, defined in listing \ref{create_method}, to commence the generation process in the backend. 
+
+\begin{lstlisting}[language=Ruby, caption={Create method of the GeneratedQuizzesController class}, label=create_method]
+def create
+  @user = current_user
+  @generated_quiz = @user.generated_quizzes.new(generated_quiz_params)
+  @generated_quiz.save
+  GeneratedQuizzesHelper.gen_copies(@generated_quiz)
+  # Generate pdf document
+  pdf = QuizPdf.new(@generated_quiz)
+  send_data pdf.render, filename: 'report.pdf', type: 'application/pdf', disposition: 'inline'
+end
+\end{lstlisting}
 
 The \textit{GeneratedQuizzesHelper} module has a method named \textit{gen\_copies}, which is responsible for creating the necessary Copy class instances and persist them to the database, based on the options the user had chosen earlier. The necessity to create a separate method inside this module was because this process has its specific logic, which shouldn't be exposed in the controller action directly. By this, it is meant that some of the options were complementary, others were not. For example, the \textit{number of copies} option is interfering with the \textit{student group} option, because the second option's purpose is to create quiz copies based on the student's names, which in turn result in a determined number of final copies. Another option interference is the \textit{versions number} and the \textit{random} options. By selecting the number of versions to be generated for a quiz, it implies that each version will have the questions randomly sorted. So, once again, the other option becomes unnecessary to be selected.
 
@@ -99,6 +111,9 @@ The biggest role in the \textit{quiz generation} process has the \textit{QuizPdf
 
 The \textit{set\_header} presented in listing \ref{set_header} of the \textit{QuizPdf} class is responsible for the QR code generation, title, student name, student group name and page number rendering and the stroking of the markers. 
 
+
+\lstinputlisting[language=Ruby, caption={QuizPdf's \textit{set\_header} method}, label=set_header]{../src/set_header.rb}
+
 The QR code is used to store some information in order to easily read it afterwards. In our case, the copy id of the \textit{Copy} class instance 
 is encoded in the QR code. Also the current page number of the copy is stored in the QR code. This information will be critical in the later image processing part of the QTK's implementation. 
 
@@ -106,22 +121,13 @@ The markers, which are positioned at corners of the page, are circles with a 10 
 
 The \textit{set\_questions} method is responsible for rendering the questions' and the answers' text. But, besides that, it draws the answers' squares, that are used by the students to select an answer when taking the quiz. Another thing related to the image processing is also being prepared at this point and that is the storing the ids of the questions and answers and the squares' left-top corner coordinates into a hash. At the end of the \textit{QuizPdf's} class execution, this hash is stored in the database in the copies table through the Copy class model. It is stored in the \textit{squares\_xy} field of that table.
 
-After the \textit{QuizPdf} class instance is created and assigned to a variable, that instance is rendered into a pdf file in the web browser. 
+After the \textit{QuizPdf} class instance is created and assigned to a variable, that instance is rendered into a pdf file in the web browser. Figure \ref{generated_quiz_page} shows an example of a generated quiz page. 
 
-\begin{lstlisting}[language=Ruby, caption={Create method of the GeneratedQuizzesController class}, label=create_method]
-def create
-  @user = current_user
-  @generated_quiz = @user.generated_quizzes.new(generated_quiz_params)
-  @generated_quiz.save
-  GeneratedQuizzesHelper.gen_copies(@generated_quiz)
-  # Generate pdf document
-  pdf = QuizPdf.new(@generated_quiz)
-  send_data pdf.render, filename: 'report.pdf', type: 'application/pdf', disposition: 'inline'
-end
-\end{lstlisting}
-
-\lstinputlisting[language=Ruby, caption={QuizPdf's \textit{set\_header} method}, label=set_header]{../src/set_header.rb}
-
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{generated_quiz}
+\caption{A generated quiz's page example}\label{qenerated_quiz_page}
+\end{figure}
 
 
 \subsection{Quiz Processing}
@@ -184,9 +190,9 @@ In listing \ref{quiz_marking} is introduced the \textit{quiz\_marking} method. I
 \lstinputlisting[language=Ruby, caption={\textit{quiz\_marking} method}, label=quiz_marking]{../src/quiz_marking.rb}
 
 
-The last method, being presented in listing \ref{} is the one which starts the image processing background job. It uses all of the methods mentioned in this subsection directly and indirectly.
+The last method that is presented in listing \ref{perform} is the one which starts the image processing background job. It uses all of the methods mentioned in this subsection directly and indirectly.
 
 
-\lstinputlisting[language=Ruby, caption={\textit{quiz\_marking} method}, label=quiz_marking]{../src/quiz_marking.rb}
+\lstinputlisting[language=Ruby, caption={\textit{perform} method}, label=perform]{../src/perform.rb}
 
 \clearpage

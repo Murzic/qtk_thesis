@@ -11,9 +11,9 @@ The main prerogatives of the app agenda were: quiz generation, quiz exporting, q
 and data processing. The problem is to accomplish these phases. 
 
 The first one, quiz generation, deals with the direct interaction of the human (our case 
-lecturer) with the technology (QTK). The academic staff is naturally reluctant to change their 
-methods of teaching and learning without a deep understanding of why and how and what 
-will be the impact in terms of quality and any resultant benefits. That is why it was 
+lecturer) with the developed technology (QTK). The academic staff is naturally reluctant to change their 
+methods of teaching and learning, without a deep understanding of why, how and what 
+will be the impact in terms of quality and the resultant benefits gained from this system. That is why it was 
 important to make the app able to offer the users various options for quiz 
 generation. Another important point was to keep the interface simple, at the same time 
 easy to understand and use. Important to notice, that the final form of the quiz contains 
@@ -60,21 +60,21 @@ REST uses HTTP for the CRUD operations that are sumarized in Table \ref{crud_ope
 As a programming approach, REST is a lightweight alternative to Web Services.
 A REST service consists of the following features:
 \begin{itemize}
-  \item Does not depend on platforms (the server can be Unix, Mac or any other kind)
-  \item Based on standards (runs on top of HTTP)
-  \item Is not language dependent(Java can communicate with Python)
-  \item Can be easily used if there are firewalls present
+  \item Does not depend on platforms (the server can be Unix, Mac or any other kind);
+  \item Based on standards (runs on top of HTTP);
+  \item Is not language dependent(Java can communicate with Python);
+  \item Can be easily used if there are firewalls present.
 \end{itemize}
 
 There are six constraints which describe the REST architecture. Five of them are mandatory. If the system doesn't comply with these, it cannot be considered RESTful, even though it is constructed in a RESTlike way.
 Below are presented the six constraints that define the RESTful architecture:
 \begin{enumerate}
-  \item Uniform Interface
-  \item Stateless
-  \item Cacheable
-  \item Client-Server
-  \item Layered System
-  \item Code on Demand (optional)
+  \item Uniform Interface;
+  \item Stateless;
+  \item Cacheable;
+  \item Client-Server;
+  \item Layered System;
+  \item Code on Demand (optional).
 \end{enumerate}
     
 The \textit{uniform interface} constraint simplifies and declutches the architecture into parts, which can then grow independently. It represents the interface between clients and servers. The uniform interface is an essential part of the outline of any REST services.  The rules which direct the uniform interface are:
@@ -169,7 +169,7 @@ Rails also has Action Mailer, used to generate and send emails; Active Job, an i
 
 The jobs that \textit{Active Job} declares are anything that needs processing, code that need to be split in smaller tasks and run in parallel, code that takes to much time for the user to wait, sending mails and other time consuming processing. 
 
-Action Mailer's $deliver\_later$ method, that transforms the email sending process into a background job that will be executed later is supported by Active Job as its backend. Mailing in background is basic in today's web applications, freeing the user from waiting for the server's response in order to proceed further.
+Action Mailer's \textit{deliver\_later} method, that transforms the email sending process into a background job that will be executed later is supported by Active Job as its backend. Mailing in background is basic in today's web applications, freeing the user from waiting for the server's response in order to proceed further.
   
 Active Job provides a job insfrastructure for every Rails application, in both background and immediate processing options. Other backend libraries for creating background jobs can be added to the system and there is no need to worry about the differences in the API in these libraries. Also this gives the possibility to change them without having to write your jobs anew.
 
@@ -177,7 +177,7 @@ Active Job provides a job insfrastructure for every Rails application, in both b
 
 
 \subsection{Quick Response Codes}
-The QR code, which stands for Quick Response Code, is a two-dimensional barcode, which was initially used for tracking inventory. It was developed in Japan by a subdivision of Toyota. Today, it is widely spread and people have found more and more uses for it. The fast gain in popularity was due to the superiority of the QR codes’ read speed and storage capacity versus the UPC barcodes.
+The QR code, which stands for Quick Response Code, is a two-dimensional barcode, which was initially used for tracking inventory. It was developed in Japan by a subdivision of Toyota, Denso Wave, \cite{qr_codes}. Today, it is widely spread and people have found more and more uses for it. The fast gain in popularity was due to the superiority of the QR codes’ read speed and storage capacity versus the UPC barcodes.
 
 The QR code is  composed of black square dots placed on a white square background. It is usually read by a phone camera, which has a QR decoding software. The code image is then interpreted and the data is extracted.
 
@@ -211,7 +211,7 @@ Having this technology at hand, the system gets to simplify the way in which it 
 
 
 \subsection{Prawn}
-Prawn is a PDF generation library written in ruby that is simple to use, quite performant and provides features such as:
+Prawn is a PDF generation library written in ruby that is simple to use, quite performant and provides the following features, \cite{prawn_doc}:
 
 \begin{itemize} 
   \item PDF builtin and embedded TrueType fonts support;
@@ -264,7 +264,7 @@ When using the generate method, the pdf object will be rendered after the block 
 \subsubsection{Chunky PNG}
 
 ChunkyPNG is a Ruby library, which hasn't got any dependency on any other libraries, thus being a plain Ruby library.
-It has the following features:
+ChukyPNG has the following features, \cite{chunky_png}:
 
 \begin{itemize}
   \item Read/Write access to the image’s pixels;
@@ -357,7 +357,7 @@ to RGB pixelstream      & 0.257684    & 0.264674 \\
 \subsection{Resque}
 Some work can't be done instantly and needs to be scheduled for another time. Resque can be used to do this in a simple way and also gives you the possibility to manage all the work that the application had stacked.
 Resque is a library for creating background jobs and it uses Redis to manage the queues. The created jobs can be put on multiple queues and processed at a later time.
-Any Ruby class or module that responds to the $perform$ method, can be a background job. Classes can be created with intention to do background jobs, or the already existing classes can be converted as jobs.
+Any Ruby class or module that responds to the $perform$ method, can be a background job. Classes can be created with intention to do background jobs, or the already existing classes can be converted into jobs.
 
 Resque contains three parts:
 
@@ -371,7 +371,7 @@ Resque workers assigned to different devices, they can uphold priorities and are
 
 Resque queues are always available, deliver visibility into their internals and stack the jobs as JSONs. Also, thanks to Redis, Redis queues support atomic push and pop.
 
-What workers work on or don't work on, what queues they are operating in, what's inside those queues, is shown by the Resque frontend. It also offers usage stats, and helps tracking errors.
+What workers work on or don't work on, what queues they are operating in, what's inside those queues, is shown by the Resque frontend. It also offers usage stats, and helps tracking errors, \cite{resque_readme}.
 
 To do some background work, a job must be defined with a $work$ method, as in listing \ref{job_define}. Further, it is necessary to put the job on the queue as presented in listing \ref{job_enqueue}. Now, this job will be enqueued in Redis. It is required for a worker to start searching for jobs and work on them. The way workers are created is shown in listing \ref{worker_start}.
 
@@ -429,7 +429,7 @@ When we add a $high\_priority$ queue near the $medium\_priority$ queue, the work
 $ QUEUES=high_priority,medium_priority rake resque:work
 \end{lstlisting}
 
-The $high\_priority$ queue is first checked when searching for jobs. If the worker finds a job on this queue, it starts processing it and then check this queue again. This repeats until no job is found. Now, the next queue, which is $medium\_priority$ will be queried for jobs. If a job is found, the worker will process it and then check again the highest priority queue. In this way the queues are prioritized in Resque.
+The $high\_priority$ queue is the first one checked when searching for jobs. If the worker finds a job on this queue, it starts processing it and then check this queue again. This repeats until no job is found. Now, the next queue, which is $medium\_priority$ will be queried for jobs. If a job is found, the worker will process it and then check again the highest priority queue. In this way, Resque prioritizes the queues.
 
 
 \clearpage
