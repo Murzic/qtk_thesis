@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.22)  5 JUN 2015 01:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.22)  5 JUN 2015 02:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -733,36 +733,36 @@ Package pdftex.def Info: ../figures/generated_quiz.pdf used on input line 138.
 
 
 ]
-Underfull \hbox (badness 1939) in paragraph at lines 44--44
+Underfull \hbox (badness 1939) in paragraph at lines 43--43
 []\OT1/cmr/m/n/12 Automatically gen-er-ates quizzes
  []
 
 
-Underfull \hbox (badness 1502) in paragraph at lines 44--44
+Underfull \hbox (badness 1502) in paragraph at lines 43--43
 []\OT1/cmr/m/n/12 No need of ex-pen-sive e-testing
  []
 
 
-Underfull \hbox (badness 2376) in paragraph at lines 51--51
+Underfull \hbox (badness 2376) in paragraph at lines 50--50
 []\OT1/cmr/m/n/12 User lan-guage lim-ited (En-glish
  []
 
 
-Underfull \hbox (badness 2689) in paragraph at lines 51--51
+Underfull \hbox (badness 2689) in paragraph at lines 50--50
 []\OT1/cmr/m/n/12 Authentication (only ba-sic, no
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--51
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
 \OT1/cmr/m/n/12 Google, Face-book, LinkedIn,
  []
 
 [50] [51]
-Underfull \hbox (badness 10000) in paragraph at lines 109--109
+Underfull \hbox (badness 10000) in paragraph at lines 115--115
 []\OT1/cmr/m/n/12 Duration
  []
 
-[52] [53] [54]) [55] [56] (./conclusions.tex [57
+[52] [53] [54] [55]) [56] (./conclusions.tex [57
 
 ] [58]) (./biblio.tex) [59
 
@@ -796,7 +796,7 @@ fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
 12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on qtk_thesis.pdf (53 pages, 2430390 bytes).
+Output written on qtk_thesis.pdf (53 pages, 2430535 bytes).
 PDF statistics:
  284 PDF objects out of 1000 (max. 8388607)
  192 compressed objects within 2 object streams
