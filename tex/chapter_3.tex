@@ -79,7 +79,7 @@ There is another type of classes which should be mentioned. These are the migrat
 
 
 \subsection{Quiz Generation}
-Two gems(libraries) were additionally used to implement the ``quiz generation'' part of the application: Strokes and Prawn. Strokes is used to generate the QR codes and Prawn is used to generate the PDF files. The main idea was to give the user the possibility to generate the quizes in different ways. So, options were provided for this purpose. Quizes can be generated based on the chosen student groups, so the generated pdf would have copies created specifically for each student of those student groups. Or, the \textit{random} option can be choosed so the questions in every copy would be arranged in a random fashion.
+Two gems(libraries) were additionally used to implement the ``quiz generation'' part of the application: Strokes and Prawn. Strokes is used to generate the QR codes and Prawn is used to generate the PDF files. The main idea was to give the user the possibility to generate the quizzes in different ways. So, options were provided for this purpose. Quizzes can be generated based on the chosen student groups, so the generated pdf would have copies created specifically for each student of those student groups. Or, the \textit{random} option can be choosed so the questions in every copy would be arranged in a random fashion.
 
 When the user chooses to generate a quiz pdf, he selects the options he wants and sends the request to the server. Here, the \textit{GeneratedQuizzesController} class, which is responsible for catching this specific request, uses the \textit{create} \ref{create_method} method to commence the generation process in the backend. 
 
@@ -126,10 +126,9 @@ end
 
 \subsection{Quiz Processing}
 
-When the user uploads a set of files, which are the generated quizes' scanned images, the system starts a background job for every one of them. These background jobs are the ones that do the image processing. 
+When the user uploads a set of files, which are the generated quizzes' scanned images, the system starts a background job for every one of them. These background jobs are the ones that do the image processing. 
 
-The \textit{ScannedQuiz} model class found in listing \ref{scanned_quiz_class} is responsible for storing the metadata of one uploaded image per class instance and has a relative table in the database. But the first class to be awakened when the user uploads something, is the UsersController class. It has the \textit{upload} action, which takes each image and creates a ScannedQuiz instance for it. At the model level, when these images are created and commited to the database, a callback is initiating a job. 
-
+The \textit{ScannedQuiz} model class found in listing \ref{scanned_quiz_class} is responsible for storing the metadata of one uploaded image per class instance and operates with the \textit{scanned\_quizzes} table in the database. But the first class to be accessed, when the user uploads something, is the UsersController class. It has the \textit{upload} action, which takes each image and creates a ScannedQuiz instance for it. At the model level, when these images are created and commited to the database, a callback is initiating a job. 
 
 \lstinputlisting[language=Ruby, caption={ScannedQuiz class}, label=scanned_quiz_class]{../src/scanned_quiz.rb}
 
@@ -137,6 +136,57 @@ The \textit{ScansProcessingJob} is the class containing all the logic behind the
 
 \lstinputlisting[language=Ruby, caption={\textit{read\_qr} method}, label=read_qr]{../src/read_qr.rb}
 
+The \textit{find\_marker} method shown in listing \ref{find_marker}, of the job processing class, is used to find the coordinates of the makers. It must receive three arguments in order to work and returns a hash containing the the coordinates for each pixel. The first argument is an object of type \textit{ChunkyPNG::Image}, which contains the rgb values of the entire image that was loaded. The other two arguments which must be given, are variables of \textit{Range} type, which represent the range of x axis and y axis that must be used to find the marker.  
 
+\lstinputlisting[language=Ruby, caption={\textit{find\_marker} method}, label=find_marker]{../src/find_marker.rb}
+
+Based on the found coodinates of the markers, the angle the page content is rotated can be calculated. First, the center coordinates of the bottom left and top left markers must be computed. These coordinates are passed to the \textit{rotation\_detection} method from listing \ref{rotation_detection}, which is responsible for getting the angle. The formula \ref{3.1} was used for computing the \textit{cosine} of $\alpha$ by using the vector's $v$ coordinates of the line formed by the centers of the two markers and vector $u$ which has the same $y$ value for all $x$.
+
+\begin{equation}
+\cos \alpha = \frac{\left\vert u_{1} \cdot v_{1} + u_{2} \cdot v_{2} \right\vert }{\sqrt{u_{1}^{2}+u_{2}^{2}} \cdot \sqrt{v_{1}^{2}+v_{2}^{2}}}  \label{3.1}
+\end{equation}
+
+where $u_{1}$ and $v_{1}$ represent the $x$ coordinates and $u_{2}$ and $v_{2}$ represent the $y$ coordinates of the vectors $v$ and $u$.
+
+Since the angle is needed to be specified in radians, formula \ref{3.2} gets us the needed result.
+\begin{equation}
+radians = \arccos{\cos \alpha} \label{3.2}
+\end{equation}
+
+Actually, the angle in degrees is also calculated for testing purposes. Formula \ref{3.3} shows how the computation was made.
+
+\begin{equation}
+degrees = \frac{\arccos \cos \alpha \cdot 180}{\pi} \label{3.3}
+\end{equation}
+
+\lstinputlisting[language=Ruby, caption={\textit{rotation\_detection} method}, label=rotation_detection]{../src/rotation_detection.rb}
+
+
+A part of the method \textit{answers\_processing} provided in listing \ref{answers_processing}, which uses data obtained from the previously mentioned methods, contains the logic behind identifying whether a certain square was marked or not in the scanned copy of the quiz. The \textit{copies} table's \textit{square\_xy} field's data is used to get the necessarry coordinates for each answer's square. Due to the possibility of the images' contents to be rotated to a certain degree, formulas \ref{3.4} and \ref{3.5}, which represent the rotation of a point in respect to (0, 0) point on the XY axis. where used to recalculate the current x and y coordinates of the square. 
+
+\begin{equation}
+x^{\prime} = x \cos \phi - y \sin \phi \label{3.4}
+\end{equation}
+
+\begin{equation}
+y^{\prime} = y \cos \phi + x \sin \phi \label{3.5}
+\end{equation}
+
+where $\phi$ is the angle in radians calculated in formula \ref{3.2}
+
+The pixels contained inside each square, are stored inside of an array. This is done using the \textit{ChunkyPNG's} possibility to access the images' pixels. Then the number of white and black pixels is calculated. The ratio black/white ratio number is used to determine whether the square was marked as anwer by the student or not. Squares which have the \textit{bw\_ratio} above 1 are considered as marked and are stored in another array that will be used in calculating the percentage of the correctly given answers.
+
+\lstinputlisting[language=Ruby, caption={\textit{answers\_processing} method snippet}, label=answers_processing]{../src/answers_processing.rb}
+
+In listing \ref{quiz_marking} is introduced the \textit{quiz\_marking} method. It's an implementation of the quizzes's grading based on its completion in percentage. It collects the correct answers ids from the database and compare them against the obtained ones. It offers one point for each correct answer. In the case when more than the necessary answers are given to a question, no points are given for any of those answers. The percentage obtained from the accumulated points is stored in the database.
+
+
+\lstinputlisting[language=Ruby, caption={\textit{quiz\_marking} method}, label=quiz_marking]{../src/quiz_marking.rb}
+
+
+The last method, being presented in listing \ref{} is the one which starts the image processing background job. It uses all of the methods mentioned in this subsection directly and indirectly.
+
+
+\lstinputlisting[language=Ruby, caption={\textit{quiz\_marking} method}, label=quiz_marking]{../src/quiz_marking.rb}
 
 \clearpage

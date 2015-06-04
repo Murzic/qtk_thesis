@@ -18,26 +18,26 @@
 \contentsline {subsubsection}{\numberline {2.1.2}Use Case Diagram}{20}
 \contentsline {subsubsection}{\numberline {2.1.3}Use Cases Description}{20}
 \contentsline {subsection}{\numberline {2.2}Class Diagrams}{24}
-\contentsline {subsection}{\numberline {2.3}Sequence Diagrams}{26}
+\contentsline {subsection}{\numberline {2.3}Sequence Diagrams}{25}
 \contentsline {subsection}{\numberline {2.4}Activity and State Diagrams}{28}
 \contentsline {section}{\numberline {3}Implementation}{32}
 \contentsline {subsection}{\numberline {3.1}User Interface}{32}
 \contentsline {subsection}{\numberline {3.2}Quiz managing}{35}
 \contentsline {subsection}{\numberline {3.3}Quiz Generation}{36}
 \contentsline {subsection}{\numberline {3.4}Quiz Processing}{38}
-\contentsline {section}{\numberline {4}Economic Analysis}{41}
-\contentsline {subsection}{\numberline {4.1}Project Description}{41}
-\contentsline {subsection}{\numberline {4.2}SWOT Analysis}{42}
-\contentsline {subsection}{\numberline {4.3}Project time schedule}{42}
-\contentsline {subsubsection}{\numberline {4.3.1}Objectives}{42}
-\contentsline {subsubsection}{\numberline {4.3.2}Schedule}{42}
-\contentsline {subsection}{\numberline {4.4}Economical proof}{44}
-\contentsline {subsubsection}{\numberline {4.4.1}Tangible and intangible expenses}{44}
-\contentsline {subsubsection}{\numberline {4.4.2}Salary expenses}{45}
-\contentsline {subsubsection}{\numberline {4.4.3}Indirect Expenses}{46}
-\contentsline {subsubsection}{\numberline {4.4.4}Wear and Project Cost}{46}
-\contentsline {subsection}{\numberline {4.5}Management}{47}
-\contentsline {subsection}{\numberline {4.6}Economic conclusion}{47}
-\contentsline {section}{Conclusions}{49}
-\contentsline {section}{References}{51}
-\contentsline {section}{Appendix}{52}
+\contentsline {section}{\numberline {4}Economic Analysis}{43}
+\contentsline {subsection}{\numberline {4.1}Project Description}{43}
+\contentsline {subsection}{\numberline {4.2}SWOT Analysis}{44}
+\contentsline {subsection}{\numberline {4.3}Project time schedule}{44}
+\contentsline {subsubsection}{\numberline {4.3.1}Objectives}{44}
+\contentsline {subsubsection}{\numberline {4.3.2}Schedule}{44}
+\contentsline {subsection}{\numberline {4.4}Economical proof}{46}
+\contentsline {subsubsection}{\numberline {4.4.1}Tangible and intangible expenses}{46}
+\contentsline {subsubsection}{\numberline {4.4.2}Salary expenses}{47}
+\contentsline {subsubsection}{\numberline {4.4.3}Indirect Expenses}{48}
+\contentsline {subsubsection}{\numberline {4.4.4}Wear and Project Cost}{48}
+\contentsline {subsection}{\numberline {4.5}Management}{49}
+\contentsline {subsection}{\numberline {4.6}Economic conclusion}{49}
+\contentsline {section}{Conclusions}{51}
+\contentsline {section}{References}{53}
+\contentsline {section}{Appendix}{54}
