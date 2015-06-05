@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.22)  5 JUN 2015 15:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.22)  5 JUN 2015 15:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -588,25 +588,25 @@ File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 
 
 ] [16] [17]
-<../figures/rails_MVC.pdf, id=43, 205.76875pt x 215.80624pt>
+<../figures/rails_MVC.pdf, id=44, 205.76875pt x 215.80624pt>
 File: ../figures/rails_MVC.pdf Graphic file (type pdf)
 
 <use ../figures/rails_MVC.pdf>
-Package pdftex.def Info: ../figures/rails_MVC.pdf used on input line 142.
+Package pdftex.def Info: ../figures/rails_MVC.pdf used on input line 135.
 (pdftex.def)             Requested size: 246.92125pt x 258.96619pt.
  [18] [19 <../figures/rails_MVC.pdf>] [20]
-<../figures/qr_v1.png, id=57, 250.9375pt x 250.9375pt>
+<../figures/qr_v1.png, id=58, 250.9375pt x 250.9375pt>
 File: ../figures/qr_v1.png Graphic file (type png)
 
 <use ../figures/qr_v1.png>
-Package pdftex.def Info: ../figures/qr_v1.png used on input line 201.
+Package pdftex.def Info: ../figures/qr_v1.png used on input line 193.
 (pdftex.def)             Requested size: 245.82962pt x 245.8443pt.
 
-<../figures/qr_v40.png, id=58, 1003.75pt x 1003.75pt>
+<../figures/qr_v40.png, id=59, 1003.75pt x 1003.75pt>
 File: ../figures/qr_v40.png Graphic file (type png)
 
 <use ../figures/qr_v40.png>
-Package pdftex.def Info: ../figures/qr_v40.png used on input line 205.
+Package pdftex.def Info: ../figures/qr_v40.png used on input line 197.
 (pdftex.def)             Requested size: 245.82962pt x 245.82135pt.
  [21 <../figures/qr_v1.png (PNG copy)> <../figures/qr_v40.png (PNG copy)>]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -621,7 +621,7 @@ File: lstlang1.sty 2013/08/26 1.5b listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 ) [25] [26])
-(./chapter_2.tex <../figures/use_case.pdf, id=83, 314.17375pt x 327.2225pt>
+(./chapter_2.tex <../figures/use_case.pdf, id=84, 314.17375pt x 327.2225pt>
 File: ../figures/use_case.pdf Graphic file (type pdf)
 
 <use ../figures/use_case.pdf>
@@ -631,7 +631,7 @@ Package pdftex.def Info: ../figures/use_case.pdf used on input line 25.
 
 
 ] [28 <../figures/use_case.pdf>] [29] [30]
-<../figures/controller_class_dia.pdf, id=100, 484.81125pt x 370.38374pt>
+<../figures/controller_class_dia.pdf, id=101, 484.81125pt x 370.38374pt>
 File: ../figures/controller_class_dia.pdf Graphic file (type pdf)
 
 <use ../figures/controller_class_dia.pdf>
@@ -639,7 +639,7 @@ Package pdftex.def Info: ../figures/controller_class_dia.pdf used on input line
  185.
 (pdftex.def)             Requested size: 512.14963pt x 391.31631pt.
  [31 <../figures/controller_class_dia.pdf>] <../figures/class_diagram_model.pdf
-, id=107, 413.545pt x 613.29124pt>
+, id=108, 413.545pt x 613.29124pt>
 File: ../figures/class_diagram_model.pdf Graphic file (type pdf)
 
 <use ../figures/class_diagram_model.pdf>
@@ -647,7 +647,7 @@ Package pdftex.def Info: ../figures/class_diagram_model.pdf used on input line
 193.
 (pdftex.def)             Requested size: 454.9009pt x 674.62244pt.
  [32 <../figures/class_diagram_model.pdf>] <../figures/background_job_class.pdf
-, id=114, 309.155pt x 228.855pt>
+, id=115, 309.155pt x 228.855pt>
 File: ../figures/background_job_class.pdf Graphic file (type pdf)
 
 <use ../figures/background_job_class.pdf>
@@ -655,7 +655,7 @@ Package pdftex.def Info: ../figures/background_job_class.pdf used on input line
  203.
 (pdftex.def)             Requested size: 340.07153pt x 251.74126pt.
  [33 <../figures/background_job_class.pdf>] <../figures/pdf_generator_class.pdf
-, id=121, 138.5175pt x 195.73125pt>
+, id=122, 138.5175pt x 195.73125pt>
 File: ../figures/pdf_generator_class.pdf Graphic file (type pdf)
 
 <use ../figures/pdf_generator_class.pdf>
@@ -663,7 +663,7 @@ Package pdftex.def Info: ../figures/pdf_generator_class.pdf used on input line
 214.
 (pdftex.def)             Requested size: 138.51715pt x 195.73076pt.
 
-<../figures/generate_quiz_state_dia.pdf, id=122, 191.71625pt x 189.70876pt>
+<../figures/generate_quiz_state_dia.pdf, id=123, 191.71625pt x 189.70876pt>
 File: ../figures/generate_quiz_state_dia.pdf Graphic file (type pdf)
 
 <use ../figures/generate_quiz_state_dia.pdf>
@@ -672,14 +672,14 @@ ine 223.
 (pdftex.def)             Requested size: 191.71577pt x 189.70828pt.
  [34 <../figures/pdf_generator_class.pdf> <../figures/generate_quiz_state_dia.p
 df>]
-<../figures/uml_quiz_processing_activity.pdf, id=132, 174.6525pt x 322.20375pt>
+<../figures/uml_quiz_processing_activity.pdf, id=133, 174.6525pt x 322.20375pt>
 File: ../figures/uml_quiz_processing_activity.pdf Graphic file (type pdf)
 <use ../figures/uml_quiz_processing_activity.pdf>
 Package pdftex.def Info: ../figures/uml_quiz_processing_activity.pdf used on in
 put line 234.
 (pdftex.def)             Requested size: 174.65207pt x 322.20296pt.
  [35 <../figures/uml_quiz_processing_activity.pdf>]
-<../figures/generate_quiz_sequence.pdf, id=139, 459.7175pt x 173.64874pt>
+<../figures/generate_quiz_sequence.pdf, id=140, 459.7175pt x 173.64874pt>
 File: ../figures/generate_quiz_sequence.pdf Graphic file (type pdf)
 
 <use ../figures/generate_quiz_sequence.pdf>
@@ -687,7 +687,7 @@ Package pdftex.def Info: ../figures/generate_quiz_sequence.pdf used on input li
 ne 270.
 (pdftex.def)             Requested size: 689.57455pt x 260.47247pt.
 
-<../figures/upload_quiz_sequence.pdf, id=140, 470.75874pt x 184.69pt>
+<../figures/upload_quiz_sequence.pdf, id=141, 470.75874pt x 184.69pt>
 File: ../figures/upload_quiz_sequence.pdf Graphic file (type pdf)
 
 <use ../figures/upload_quiz_sequence.pdf>
@@ -696,7 +696,7 @@ Package pdftex.def Info: ../figures/upload_quiz_sequence.pdf used on input line
 (pdftex.def)             Requested size: 706.1364pt x 277.03429pt.
 ) [36] [37 <../figures/generate_quiz_sequence.pdf>] [38 <../figures/upload_quiz
 _sequence.pdf>] (./chapter_3.tex
-<../figures/main_page_mockup.pdf, id=157, 940.51375pt x 653.44125pt>
+<../figures/main_page_mockup.pdf, id=158, 940.51375pt x 653.44125pt>
 File: ../figures/main_page_mockup.pdf Graphic file (type pdf)
 
 <use ../figures/main_page_mockup.pdf>
@@ -704,7 +704,7 @@ Package pdftex.def Info: ../figures/main_page_mockup.pdf used on input line 36.
 
 (pdftex.def)             Requested size: 481.42189pt x 334.47702pt.
 
-<../figures/quiz_generate_mockup.pdf, id=158, 940.51375pt x 653.44125pt>
+<../figures/quiz_generate_mockup.pdf, id=159, 940.51375pt x 653.44125pt>
 File: ../figures/quiz_generate_mockup.pdf Graphic file (type pdf)
 
 <use ../figures/quiz_generate_mockup.pdf>
@@ -712,14 +712,14 @@ Package pdftex.def Info: ../figures/quiz_generate_mockup.pdf used on input line
  40.
 (pdftex.def)             Requested size: 481.42189pt x 334.47702pt.
 
-<../figures/main_page_qtk.png, id=159, 1187.43625pt x 442.65375pt>
+<../figures/main_page_qtk.png, id=160, 1187.43625pt x 442.65375pt>
 File: ../figures/main_page_qtk.png Graphic file (type png)
 
 <use ../figures/main_page_qtk.png>
 Package pdftex.def Info: ../figures/main_page_qtk.png used on input line 53.
 (pdftex.def)             Requested size: 481.42189pt x 179.46289pt.
 
-<../figures/generate_quiz_qtk.png, id=160, 1187.43625pt x 691.58376pt>
+<../figures/generate_quiz_qtk.png, id=161, 1187.43625pt x 691.58376pt>
 File: ../figures/generate_quiz_qtk.png Graphic file (type png)
 
 <use ../figures/generate_quiz_qtk.png>
@@ -743,17 +743,17 @@ uiz_qtk.png>]) (../src/question.rb) (../src/students_controller.rb [42])
 
 pdfTeX warning: pdflatex (file ../figures/generated_quiz.pdf): PDF inclusion: f
 ound PDF version <1.7>, but at most version <1.5> allowed
-<../figures/generated_quiz.pdf, id=190, 614.295pt x 794.97pt>
+<../figures/generated_quiz.pdf, id=191, 614.295pt x 794.97pt>
 File: ../figures/generated_quiz.pdf Graphic file (type pdf)
 
 <use ../figures/generated_quiz.pdf>
 Package pdftex.def Info: ../figures/generated_quiz.pdf used on input line 138.
 (pdftex.def)             Requested size: 512.14963pt x 662.8211pt.
- [46 <../figures/generated_quiz.pdf>]
-(../src/scanned_quiz.rb) (../src/read_qr.rb [47]) (../src/find_marker.rb)
-[48] (../src/rotation_detection.rb) [49] (../src/answers_processing.rb)
-(../src/quiz_marking.rb [50]) (../src/perform.rb) [51]) (./chapter_4.tex
-[52
+ (../src/scanned_quiz.rb) (../src/read_qr.rb [46] [47 <../figures/generated_qui
+z.pdf>]) (../src/find_marker.rb) [48]
+(../src/rotation_detection.rb) [49] (../src/answers_processing.rb)
+(../src/quiz_marking.rb [50]) (../src/perform.rb [51]) [52]) (./chapter_4.tex
+[53
 
 
 ]
@@ -781,14 +781,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--51
 \OT1/cmr/m/n/12 Google, Face-book, LinkedIn,
  []
 
-[53] [54]
+[54] [55]
 Underfull \hbox (badness 10000) in paragraph at lines 116--116
 []\OT1/cmr/m/n/12 Duration
  []
 
-[55] [56] [57] [58]) [59] (./conclusions.tex [60
+[56] [57] [58] [59]) [60] (./conclusions.tex [61
 
-] [61]) (./biblio.tex) [62
+] [62]) (./biblio.tex) [63
 
 
 
@@ -801,7 +801,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  8655 strings out of 495028
  126358 string characters out of 6181497
- 422281 words of memory out of 5000000
+ 416281 words of memory out of 5000000
  11614 multiletter control sequences out of 15000+600000
  8647 words of font info for 32 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -818,10 +818,10 @@ fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
 12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on qtk_thesis.pdf (57 pages, 2436550 bytes).
+Output written on qtk_thesis.pdf (58 pages, 2437426 bytes).
 PDF statistics:
- 298 PDF objects out of 1000 (max. 8388607)
- 201 compressed objects within 3 object streams
+ 301 PDF objects out of 1000 (max. 8388607)
+ 203 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

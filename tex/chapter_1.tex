@@ -104,10 +104,7 @@ The clients must have the possibility to \textit{cache} responses. To avert clie
 Intermediary serevers are used in a \textit{layered system}. They can improve the system's scalability by using load-balancing of services between multiple networks and shared caches. Also, the security can be strenghtened by the use of layers. Clients should not be able to differentiate whether it is connected directly to the server it is accessing or to an intermediate server.
 The downside of a layered system is that it can generate overhead and latency to the data processing. If it is supports cache contstraints, then it can profit from the shared caching at intermediary servers.
 
-The functionality of the client side can be enhanced by providing executable logic by the servers. The amount of features to be implemented at client-side drops thanks to this constraint. System extensibility is improved by having the opportunity to download additional features to the system.
-
-
-If these constraints are being supported, the following possibilities are made available inside our system:
+The functionality of the client side can be enhanced by providing executable logic by the servers. The amount of features to be implemented at client-side drops thanks to this constraint. System extensibility is improved by having the opportunity to download additional features to the system and use them as part of the app. If these constraints are being supported, the following possibilities are made available inside our system:
 \begin{itemize} 
   \item Scalability;
   \item Simplicity;
@@ -120,7 +117,7 @@ If these constraints are being supported, the following possibilities are made a
 
 \subsection{Rails}
 
-Rails has some principles to which it adheres to:
+Ruby on Rails, a web application framework, created and released as open source in July 2004 by David Heinemeier Hansson, has some principles to which it adheres to:
 \begin{itemize}
   \item Don't Repeat Yourself;
   \item Convention Over Configuration;
@@ -129,13 +126,9 @@ Rails has some principles to which it adheres to:
 
 DRY says that ``Every piece of knowledge must have a single, unambiguous, authoritative representation within a system'', \cite{dry_principle}. You can get more maintainability and extensibility by refraining to write duplicate code, documentation or any other information related to the system being developed. 
 
-``Rails has opinions about the best way to do many things in a web application, and defaults to this set of conventions, rather than require that you specify every minutiae through endless configuration files'', \cite{rails_principles}.
+``Rails has opinions about the best way to do many things in a web application, and defaults to this set of conventions, rather than require that you specify every minutiae through endless configuration files'', \cite{rails_principles}. The main application logic must be placed inside the model. The controller must remain as thin as possible. 
 
-The main application logic must be placed inside the model. The controller must remain as thin as possible. 
-
-Rails is a web-application framework that includes all necessary to create web applications fitting to the Model-View-Controller (MVC) pattern.
-MVC pattern comprehension is essential to understanding Rails, so MVC will be described further. 
-Figure \ref{rails_mvc} shows how Rails implements the MVC pattern. 
+Rails is a web-application framework that includes all necessary to create web applications fitting to the Model-View-Controller (MVC) pattern. MVC pattern comprehension is essential to understanding Rails, so MVC will be described further. Figure \ref{rails_mvc} shows how Rails implements the MVC pattern. 
 
 \begin{figure}[!ht]
 \centering
@@ -144,8 +137,7 @@ Figure \ref{rails_mvc} shows how Rails implements the MVC pattern.
 \end{figure}
 
 MVC splits your application into three layers, each having a distinctive duty.
-
-The Model layer depicts your domain model and contains the business logic that is individual to your application. ActiveRecord::Base is the class from which the database-backed model classes are inherited, in Rails. Data from database tuples are received as objects, that have business logic methods available to them, provided by the Active Record. Models can be ordinary Ruby classes, or classes that can apply a set of interfaces as given by the Active Record module, while most Rails models are supported by a database.
+The Model layer depicts your domain model and contains the business logic that is individual to your application. ActiveRecord::Base is the class from which the database-backed model classes are inherited, in Rails0. Data from database tuples are received as objects, that are provided with business logic methods, by the Active Record. Models can be ordinary Ruby classes, or classes that can apply a set of interfaces as given by the Active Record module, while most Rails models are supported by a database.
 
 Incoming HTTP requests and the appropriate responses for them are managed by the Controller layer.
 Rails controllers can generate HTML, XML, JSON, mobile views, PDFs as returning response to the request. Controllers render view templates and control the models so that it can give a suitable HTTP response. 
@@ -159,7 +151,7 @@ Action Dispatch parses the web request's contained information routes the reques
 
 Controller classes inherit from the ActionController::Base class and implement actions to manage requests. The content which is generated from views is usually what is displayed as the result of an action. 
 
-In Rails framwork, the Action Dispatch functionality is dispatched by default, and the users interface with the Action Controller module, which prompts the Action View rendering. 
+In the Ruby on Rails framework, the Action Dispatch functionality is dispatched by default, and the users interface with the Action Controller module, which prompts the Action View rendering. 
 
 Action Pack contains both Action Dispatch and Action Controller modules. So it provides both the view and the controller layers of the MVC. Action Pack is a framework that manages web requests. With it, you can route (map the request URLs to their respective actions), establish controllers which apply actions, and render views(templates of different formats) as responses.
 
@@ -191,7 +183,7 @@ The black dots in the code are also called modules. Their size are an important 
 
 The QR code is designed in such a way that, the more data you want to store in it, the more columns and rows containing modules will be inserted. Therefore, a QR code must have a bigger size when a larger amount of data is encoded and vice-versa.
 
-So, the QR codes have been categorized in versions, from Version 1 presented in figure \ref{fig1.1a} to Version 40 prestented in figure \ref{fig1.1b}.  QR code Versions differing from the previous one by having 4 more modules on each side: Version 1 with ( 21 x 21 modules ) with possibility of storing 25 alphanumerics with the lowest correction level and Version 40 with  ( 177 x 177 modules ) with 1852 alphanumerics. The maximum data storage for each version is derived from the amount of data, character type and correction level.
+So, the QR codes have been categorized in versions, from Version 1 presented in figure \ref{fig1.1a} to Version 40 prestented in figure \ref{fig1.1b}.  QR code Versions differing from the previous one by having 4 more modules on each side: Version 1 with ($21 \times 21$ modules) with possibility of storing 25 alphanumerics with the lowest correction level and Version 40 with  ($177 \times 177$ modules) with 1852 alphanumerics. The maximum data storage for each version is derived from the amount of data, character type and correction level.
 
 
 \begin{figure}[!ht]
@@ -203,7 +195,7 @@ So, the QR codes have been categorized in versions, from Version 1 presented in 
   \subfloat[Version 40 QR code\label{fig1.1b}]{%
     \includegraphics[width=0.48\textwidth,natheight=1000, natwidth=1000]{qr_v40.png}
   }
-  \caption{Version 1 QR code with 21 x 21 modules (a), version 40 QR code with 177 x 177 modules (b).}
+  \caption{Version 1 QR code -- $21\times21$ modules (a), version 40 QR code -- $177\times177$ modules (b).}
   \label{fig1.1}
 \end{figure}
 
@@ -359,7 +351,7 @@ Some work can't be done instantly and needs to be scheduled for another time. Re
 Resque is a library for creating background jobs and it uses Redis to manage the queues. The created jobs can be put on multiple queues and processed at a later time.
 Any Ruby class or module that responds to the $perform$ method, can be a background job. Classes can be created with intention to do background jobs, or the already existing classes can be converted into jobs.
 
-Resque contains three parts:
+Resque background processing library contains three parts:
 
 \begin{enumerate}
   \item A Ruby library for creating, processing and querying jobs;
@@ -397,11 +389,11 @@ The process that is started here, queries the Redis queue, takes any job that is
 
 Workers react to the following signals:
 \begin{enumerate}
-  \item QUIT - Wait for child process to end then exit;
-  \item TERM / INT - Instantly kill child process then exit;
-  \item USR1 - Instantly kill child process but don't exit;
-  \item USR2 - No jobs are started being processed;
-  \item CONT - After USR2 signal start processing jobs again.
+  \item QUIT -- Wait for child process to end then exit;
+  \item TERM / INT -- Instantly kill child process then exit;
+  \item USR1 -- Instantly kill child process but don't exit;
+  \item USR2 -- No jobs are started being processed;
+  \item CONT -- After USR2 signal start processing jobs again.
 \end{enumerate}
 
 QUIT signal is usually used to shutdown a worker.
