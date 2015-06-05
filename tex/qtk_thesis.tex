@@ -10,9 +10,32 @@
 
 \setcounter{page}{8}
 
+\phantomsection
+%\addcontentsline{toc}{section}{SUMMARY}
+\input{adnotation.tex}
+\cleardoublepage
+
+\phantomsection
+%\addcontentsline{toc}{section}{АННОТАЦИЯ}
+\input{rezumat.tex}
+\cleardoublepage
+
 \tableofcontents
 \addtocontents{toc}{\protect\thispagestyle{empty}}
 \cleardoublepage
+\newpage
+
+\listoffigures
+\addcontentsline{toc}{section}{List of figures}
+\clearpage
+
+\listoftables
+\addcontentsline{toc}{section}{List of tables}
+\clearpage
+
+\lstlistoflistings
+\addcontentsline{toc}{section}{Listings}
+\clearpage
 
 % Introduction
 % \phantomsection

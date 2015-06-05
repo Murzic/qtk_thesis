@@ -1,0 +1,20 @@
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Rails MVC\relax }}{21}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Version 1 QR code with 21 x 21 modules (a), version 40 QR code with 177 x 177 modules (b).\relax }}{23}
+\contentsline {subfigure}{\numberline {(\tmspace +\thinmuskip {.1667em}(a))}{\ignorespaces {Version 1 QR code}}}{23}
+\contentsline {subfigure}{\numberline {(\tmspace +\thinmuskip {.1667em}(b))}{\ignorespaces {Version 40 QR code}}}{23}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Use case diagram\relax }}{30}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Controller class diagram\relax }}{33}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Model class diagram\relax }}{34}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Background job class diagram\relax }}{35}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Pdf generator class\relax }}{36}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Quiz generation state diagram\relax }}{36}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Quiz processing activity diagram\relax }}{37}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Quiz generating sequence diagram\relax }}{39}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Quiz uploading sequence diagram\relax }}{40}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces QTK's main page mockup (a), quiz generation page mockup (b).\relax }}{42}
+\contentsline {subfigure}{\numberline {(\tmspace +\thinmuskip {.1667em}(a))}{\ignorespaces {QTK's main page mockup}}}{42}
+\contentsline {subfigure}{\numberline {(\tmspace +\thinmuskip {.1667em}(b))}{\ignorespaces {QTK's quiz generation page mockup}}}{42}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces QTK's main page (a), generate quiz page (b).\relax }}{43}
+\contentsline {subfigure}{\numberline {(\tmspace +\thinmuskip {.1667em}(a))}{\ignorespaces {QTK's main page}}}{43}
+\contentsline {subfigure}{\numberline {(\tmspace +\thinmuskip {.1667em}(b))}{\ignorespaces {QTK's generate quiz page}}}{43}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces A generated quiz's page example\relax }}{48}
