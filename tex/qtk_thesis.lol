@@ -14,8 +14,8 @@
 \contentsline {lstlisting}{\numberline {3.4}CreateAnswers class}{43}
 \contentsline {lstlisting}{\numberline {3.5}Create method of the GeneratedQuizzesController class}{44}
 \contentsline {lstlisting}{\numberline {3.6}QuizPdf's \textit {set\_header} method}{45}
-\contentsline {lstlisting}{\numberline {3.7}ScannedQuiz class}{46}
-\contentsline {lstlisting}{\numberline {3.8}\textit {read\_qr} method}{46}
+\contentsline {lstlisting}{\numberline {3.7}ScannedQuiz class}{47}
+\contentsline {lstlisting}{\numberline {3.8}\textit {read\_qr} method}{47}
 \contentsline {lstlisting}{\numberline {3.9}\textit {find\_marker} method}{48}
 \contentsline {lstlisting}{\numberline {3.10}\textit {rotation\_detection} method}{49}
 \contentsline {lstlisting}{\numberline {3.11}\textit {answers\_processing} method snippet}{50}

@@ -104,16 +104,19 @@ def create
 end
 \end{lstlisting}
 
+\vspace{5pt}
+
+
 The \textit{GeneratedQuizzesHelper} module has a method named \textit{gen\_copies}, which is responsible for creating the necessary Copy class instances and persist them to the database, based on the options the user had chosen earlier. These options are contained in the variable passed as an arguement to this method. The necessity to create a separate method inside this module was because this process has its specific logic, which shouldn't be exposed in the controller action directly. By this, it is meant that some of the options were complementary, others were not. For example, the \textit{number of copies} option is interfering with the \textit{student group} option, because the second option's purpose is to create quiz copies based on the student's names, which in turn result in a determined number of final copies. Another option interference is the \textit{versions number} and the \textit{random} options. By selecting the number of versions to be generated for a quiz, it implies that each version will have the questions randomly sorted. So, once again, the other option becomes unnecessary to be selected.
 
 The biggest role in the \textit{quiz generation} process has the \textit{QuizPdf} class. This class inherits from the \textit{Prawn::Document} class. It uses the Prawn's API to render all the required elements on the page. Here is a list of those elements: 
+\vspace{-6pt}
 \begin{itemize}
   \item Questions;
   \item Answers;
   \item Squares next to the answers;
-  \item The title
-  \item Student name 
-  \item Student group;
+  \item The title;
+  \item Student name and studen group; 
   \item QR code;
   \item Markers(circles) in each corner;
   \item Page number.
@@ -121,8 +124,11 @@ The biggest role in the \textit{quiz generation} process has the \textit{QuizPdf
 
 The \textit{set\_header} method presented in listing \ref{set_header} of the \textit{QuizPdf} class is responsible for the QR code generation, title, student name, student group name and page number rendering and the stroking of the markers. 
 
+\vspace{-5pt}
 
 \lstinputlisting[language=Ruby, caption={QuizPdf's \textit{set\_header} method}, label=set_header]{../src/set_header.rb}
+
+\vspace{5pt}
 
 The QR code is used to store some information in order to easily read it afterwards. In our case, the copy id of the \textit{Copy} class instance 
 is encoded in the QR code. Also the current page number of the copy is stored in the QR code. This information will be critical in the later image processing part of the QTK's implementation. 
@@ -159,19 +165,21 @@ The \textit{find\_marker} method shown in listing \ref{find_marker}, of the job 
 Based on the found coodinates of the markers, the angle the page content is rotated can be calculated. First, the center coordinates of the bottom left and top left markers must be computed. These coordinates are passed to the \textit{rotation\_detection} method from listing \ref{rotation_detection}, which is responsible for getting the angle. The formula \ref{3.1} \cite{cosalpha} was used for computing the \textit{cosine} of $\alpha$ by using the vector's $v$ coordinates of the line formed by the centers of the two markers and vector $u$ which has the same $y$ value for all $x$.
 
 \begin{equation}
-\cos \alpha = \frac{\left\vert u_{1} \cdot v_{1} + u_{2} \cdot v_{2} \right\vert }{\sqrt{u_{1}^{2}+u_{2}^{2}} \cdot \sqrt{v_{1}^{2}+v_{2}^{2}}}  \label{3.1}
+\cos \alpha = \frac{\left\vert u_{1} \cdot v_{1} + u_{2} \cdot v_{2} \right\vert }{\sqrt{u_{1}^{2}+u_{2}^{2}} \cdot \sqrt{v_{1}^{2}+v_{2}^{2}}},  \label{3.1}
 \end{equation}
+
 where $u_{1}$ and $v_{1}$ represent the $x$ coordinates, respectively, the $u_{2}$ and $v_{2}$ represent the $y$ coordinates of the vectors $v$ and $u$.
 
 Since the angle is needed to be specified in radians, formula \ref{3.2} gets us the needed result.
 \begin{equation}
-radians = \arccos{\cos \alpha} \label{3.2}
+\alpha = \arccos{\cos \alpha}, \label{3.2}
 \end{equation}
+where $\alpha$ is measured in radians. A measure in degrees, is given by formula \ref{3.3}: 
 
-Actually, the angle in degrees is also calculated for testing purposes. Formula \ref{3.3} shows how the computation was made.
+% Actually, the angle in degrees is also calculated for testing purposes. Formula \ref{3.3} shows how the computation was made.
 
 \begin{equation}
-degrees = \frac{\arccos \cos \alpha \cdot 180}{\pi} \label{3.3}
+\alpha = \frac{\arccos \cos \alpha \cdot 180}{\pi}. \label{3.3}
 \end{equation}
 
 \lstinputlisting[language=Ruby, caption={\textit{rotation\_detection} method}, label=rotation_detection]{../src/rotation_detection.rb}
@@ -180,11 +188,11 @@ degrees = \frac{\arccos \cos \alpha \cdot 180}{\pi} \label{3.3}
 A part of the method \textit{answers\_processing} provided in listing \ref{answers_processing}, which uses data obtained from the previously mentioned methods, contains the logic behind identifying whether a certain square was marked or not in the scanned copy of the quiz. The \textit{copies} table's \textit{square\_xy} field's data is used to get the necessarry coordinates for each answer's square. Due to the possibility of the images' contents to be rotated to a certain degree, formulas \ref{3.4} and \ref{3.5}, which represent the rotation of a point in respect to (0, 0) point on the XY axis, \cite{point_rotation}. where used to recalculate the current x and y coordinates of the square. 
 
 \begin{equation}
-x^{\prime} = x \cos \phi - y \sin \phi \label{3.4}
+x^{\prime} = x \cos \phi - y \sin \phi, \label{3.4}
 \end{equation}
 
 \begin{equation}
-y^{\prime} = y \cos \phi + x \sin \phi \label{3.5}
+y^{\prime} = y \cos \phi + x \sin \phi. \label{3.5}
 \end{equation}
 where $\phi$ is the angle in radians calculated in formula \ref{3.2}
 
@@ -197,7 +205,7 @@ In listing \ref{quiz_marking} is introduced the \textit{quiz\_marking} method. I
 
 \lstinputlisting[language=Ruby, caption={\textit{quiz\_marking} method}, label=quiz_marking]{../src/quiz_marking.rb}
 
-
+\vspace{5pt}
 The last method that is presented in listing \ref{perform} is the one which starts the image processing background job. It uses all of the methods mentioned in this subsection directly and indirectly.
 
 
