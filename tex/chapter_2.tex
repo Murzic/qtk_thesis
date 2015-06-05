@@ -22,12 +22,14 @@ The use case diagram presented below, in figure \ref{use_case_diagram}, shows th
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[scale=1.2]{use_case}
+\includegraphics[scale=1.1]{use_case}
 \caption{Use case diagram} \label{use_case_diagram}
 \end{figure}
 
 \subsubsection{Use Cases Description}
+Based on the actions presented in the use case diagram, a set of use cases scenario descriptions were made, in order to better understand in which direction should the user interface evolve to. These use cases descriptions are based on the user's interaction with the visual interface of the system. Each of them goes thoroughly through every step performed in each scenario.
 \begin{enumerate}
+  \setlength{\parskip}{-5pt}
   \item Registering a user:
   \begin{itemize}
     \item A teacher enters the system’s domain name in the browser;
@@ -182,7 +184,7 @@ The diagram illustrated below, in figure \ref{controller_class}, represents the 
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\textwidth]{controller_class_dia}
+\includegraphics[width=0.95\textwidth]{controller_class_dia}
 \caption{Controller class diagram}\label{controller_class}
 \end{figure}
 
@@ -190,7 +192,7 @@ The class diagram presented in figure \ref{model_class}, denotes the Model layer
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[scale=1.1]{class_diagram_model}
+\includegraphics[scale=1.15]{class_diagram_model}
 \caption{Model class diagram}\label{model_class}
 \end{figure}
 
@@ -238,7 +240,8 @@ The activity diagram takes the quiz processing through a list of activities and 
 
 \subsection{Sequence Diagrams}
 The flow of logic of quiz generation and quiz uploading/processing will be introduced in figures \ref{generate_sequence} and \ref{upload_sequence}. The diagrams will be covered step by step, being guided by the sequence of the messages. The entities that interact with each other in the diagram are enumerated:
-\begin{enumerate} 
+\vspace{-5pt}
+\begin{enumerate}
   \item User;
   \item Application;
   \item GeneratedQuizzesController class;

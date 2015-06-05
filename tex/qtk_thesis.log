@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.22)  5 JUN 2015 15:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.22)  5 JUN 2015 16:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -626,7 +626,7 @@ File: ../figures/use_case.pdf Graphic file (type pdf)
 
 <use ../figures/use_case.pdf>
 Package pdftex.def Info: ../figures/use_case.pdf used on input line 25.
-(pdftex.def)             Requested size: 377.0066pt x 392.66502pt.
+(pdftex.def)             Requested size: 345.59218pt x 359.94585pt.
  [27
 
 
@@ -636,23 +636,31 @@ File: ../figures/controller_class_dia.pdf Graphic file (type pdf)
 
 <use ../figures/controller_class_dia.pdf>
 Package pdftex.def Info: ../figures/controller_class_dia.pdf used on input line
- 185.
-(pdftex.def)             Requested size: 512.14963pt x 391.31631pt.
- [31 <../figures/controller_class_dia.pdf>] <../figures/class_diagram_model.pdf
-, id=108, 413.545pt x 613.29124pt>
+ 187.
+(pdftex.def)             Requested size: 486.54057pt x 371.72224pt.
+
+<../figures/class_diagram_model.pdf, id=102, 413.545pt x 613.29124pt>
 File: ../figures/class_diagram_model.pdf Graphic file (type pdf)
 
 <use ../figures/class_diagram_model.pdf>
 Package pdftex.def Info: ../figures/class_diagram_model.pdf used on input line 
-193.
-(pdftex.def)             Requested size: 454.9009pt x 674.62244pt.
- [32 <../figures/class_diagram_model.pdf>] <../figures/background_job_class.pdf
-, id=115, 309.155pt x 228.855pt>
+195.
+(pdftex.def)             Requested size: 475.57304pt x 705.27945pt.
+ [31 <../figures/controller_class_dia.pdf>]
+
+LaTeX Warning: Text page 32 contains only floats.
+
+
+Overfull \vbox (7.4839pt too high) has occurred while \output is active []
+
+
+[32 <../figures/class_diagram_model.pdf>]
+<../figures/background_job_class.pdf, id=115, 309.155pt x 228.855pt>
 File: ../figures/background_job_class.pdf Graphic file (type pdf)
 
 <use ../figures/background_job_class.pdf>
 Package pdftex.def Info: ../figures/background_job_class.pdf used on input line
- 203.
+ 205.
 (pdftex.def)             Requested size: 340.07153pt x 251.74126pt.
  [33 <../figures/background_job_class.pdf>] <../figures/pdf_generator_class.pdf
 , id=122, 138.5175pt x 195.73125pt>
@@ -660,7 +668,7 @@ File: ../figures/pdf_generator_class.pdf Graphic file (type pdf)
 
 <use ../figures/pdf_generator_class.pdf>
 Package pdftex.def Info: ../figures/pdf_generator_class.pdf used on input line 
-214.
+216.
 (pdftex.def)             Requested size: 138.51715pt x 195.73076pt.
 
 <../figures/generate_quiz_state_dia.pdf, id=123, 191.71625pt x 189.70876pt>
@@ -668,7 +676,7 @@ File: ../figures/generate_quiz_state_dia.pdf Graphic file (type pdf)
 
 <use ../figures/generate_quiz_state_dia.pdf>
 Package pdftex.def Info: ../figures/generate_quiz_state_dia.pdf used on input l
-ine 223.
+ine 225.
 (pdftex.def)             Requested size: 191.71577pt x 189.70828pt.
  [34 <../figures/pdf_generator_class.pdf> <../figures/generate_quiz_state_dia.p
 df>]
@@ -676,7 +684,7 @@ df>]
 File: ../figures/uml_quiz_processing_activity.pdf Graphic file (type pdf)
 <use ../figures/uml_quiz_processing_activity.pdf>
 Package pdftex.def Info: ../figures/uml_quiz_processing_activity.pdf used on in
-put line 234.
+put line 236.
 (pdftex.def)             Requested size: 174.65207pt x 322.20296pt.
  [35 <../figures/uml_quiz_processing_activity.pdf>]
 <../figures/generate_quiz_sequence.pdf, id=140, 459.7175pt x 173.64874pt>
@@ -684,7 +692,7 @@ File: ../figures/generate_quiz_sequence.pdf Graphic file (type pdf)
 
 <use ../figures/generate_quiz_sequence.pdf>
 Package pdftex.def Info: ../figures/generate_quiz_sequence.pdf used on input li
-ne 270.
+ne 273.
 (pdftex.def)             Requested size: 689.57455pt x 260.47247pt.
 
 <../figures/upload_quiz_sequence.pdf, id=141, 470.75874pt x 184.69pt>
@@ -692,7 +700,7 @@ File: ../figures/upload_quiz_sequence.pdf Graphic file (type pdf)
 
 <use ../figures/upload_quiz_sequence.pdf>
 Package pdftex.def Info: ../figures/upload_quiz_sequence.pdf used on input line
- 276.
+ 279.
 (pdftex.def)             Requested size: 706.1364pt x 277.03429pt.
 ) [36] [37 <../figures/generate_quiz_sequence.pdf>] [38 <../figures/upload_quiz
 _sequence.pdf>] (./chapter_3.tex
@@ -818,7 +826,7 @@ fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
 12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on qtk_thesis.pdf (58 pages, 2437426 bytes).
+Output written on qtk_thesis.pdf (58 pages, 2437670 bytes).
 PDF statistics:
  301 PDF objects out of 1000 (max. 8388607)
  203 compressed objects within 3 object streams
