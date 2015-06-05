@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.22)  5 JUN 2015 09:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.22)  5 JUN 2015 15:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -548,53 +548,53 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 \c@lstlisting=\count183
  (./adnotation.tex)
-[8
+[1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./rezumat.tex) [9
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./rezumat.tex) [2
 
 ]
-(./qtk_thesis.toc [10
+(./qtk_thesis.toc [3
 
 ])
 \tf@toc=\write3
 \openout3 = `qtk_thesis.toc'.
 
- [11] (./qtk_thesis.lof)
+ [4] (./qtk_thesis.lof)
 \tf@lof=\write4
 \openout4 = `qtk_thesis.lof'.
 
- [12
+ [10
 
 ] (./qtk_thesis.lot)
 \tf@lot=\write5
 \openout5 = `qtk_thesis.lot'.
 
+ [11
 
-[13
-
-] (./qtk_thesis.lol)
+]
+(./qtk_thesis.lol)
 \tf@lol=\write6
 \openout6 = `qtk_thesis.lol'.
 
- [14
+ [12
 
 ] (./introduction.tex
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-) [15
+) [13
 
-] [16])
-(./chapter_1.tex [17
+] [14])
+(./chapter_1.tex [15
 
 
-] [18] [19]
+] [16] [17]
 <../figures/rails_MVC.pdf, id=43, 205.76875pt x 215.80624pt>
 File: ../figures/rails_MVC.pdf Graphic file (type pdf)
 
 <use ../figures/rails_MVC.pdf>
 Package pdftex.def Info: ../figures/rails_MVC.pdf used on input line 142.
 (pdftex.def)             Requested size: 246.92125pt x 258.96619pt.
- [20] [21 <../figures/rails_MVC.pdf>] [22]
+ [18] [19 <../figures/rails_MVC.pdf>] [20]
 <../figures/qr_v1.png, id=57, 250.9375pt x 250.9375pt>
 File: ../figures/qr_v1.png Graphic file (type png)
 
@@ -608,29 +608,29 @@ File: ../figures/qr_v40.png Graphic file (type png)
 <use ../figures/qr_v40.png>
 Package pdftex.def Info: ../figures/qr_v40.png used on input line 205.
 (pdftex.def)             Requested size: 245.82962pt x 245.82135pt.
- [23 <../figures/qr_v1.png (PNG copy)> <../figures/qr_v40.png (PNG copy)>]
+ [21 <../figures/qr_v1.png (PNG copy)> <../figures/qr_v40.png (PNG copy)>]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2013/08/26 1.5b listings language file
-) [24] [25]
-[26] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+) [22] [23]
+[24] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
-) [27] [28])
+) [25] [26])
 (./chapter_2.tex <../figures/use_case.pdf, id=83, 314.17375pt x 327.2225pt>
 File: ../figures/use_case.pdf Graphic file (type pdf)
 
 <use ../figures/use_case.pdf>
 Package pdftex.def Info: ../figures/use_case.pdf used on input line 25.
 (pdftex.def)             Requested size: 377.0066pt x 392.66502pt.
- [29
+ [27
 
 
-] [30 <../figures/use_case.pdf>] [31] [32]
+] [28 <../figures/use_case.pdf>] [29] [30]
 <../figures/controller_class_dia.pdf, id=100, 484.81125pt x 370.38374pt>
 File: ../figures/controller_class_dia.pdf Graphic file (type pdf)
 
@@ -638,7 +638,7 @@ File: ../figures/controller_class_dia.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../figures/controller_class_dia.pdf used on input line
  185.
 (pdftex.def)             Requested size: 512.14963pt x 391.31631pt.
- [33 <../figures/controller_class_dia.pdf>] <../figures/class_diagram_model.pdf
+ [31 <../figures/controller_class_dia.pdf>] <../figures/class_diagram_model.pdf
 , id=107, 413.545pt x 613.29124pt>
 File: ../figures/class_diagram_model.pdf Graphic file (type pdf)
 
@@ -646,7 +646,7 @@ File: ../figures/class_diagram_model.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../figures/class_diagram_model.pdf used on input line 
 193.
 (pdftex.def)             Requested size: 454.9009pt x 674.62244pt.
- [34 <../figures/class_diagram_model.pdf>] <../figures/background_job_class.pdf
+ [32 <../figures/class_diagram_model.pdf>] <../figures/background_job_class.pdf
 , id=114, 309.155pt x 228.855pt>
 File: ../figures/background_job_class.pdf Graphic file (type pdf)
 
@@ -654,7 +654,7 @@ File: ../figures/background_job_class.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../figures/background_job_class.pdf used on input line
  203.
 (pdftex.def)             Requested size: 340.07153pt x 251.74126pt.
- [35 <../figures/background_job_class.pdf>] <../figures/pdf_generator_class.pdf
+ [33 <../figures/background_job_class.pdf>] <../figures/pdf_generator_class.pdf
 , id=121, 138.5175pt x 195.73125pt>
 File: ../figures/pdf_generator_class.pdf Graphic file (type pdf)
 
@@ -670,7 +670,7 @@ File: ../figures/generate_quiz_state_dia.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../figures/generate_quiz_state_dia.pdf used on input l
 ine 223.
 (pdftex.def)             Requested size: 191.71577pt x 189.70828pt.
- [36 <../figures/pdf_generator_class.pdf> <../figures/generate_quiz_state_dia.p
+ [34 <../figures/pdf_generator_class.pdf> <../figures/generate_quiz_state_dia.p
 df>]
 <../figures/uml_quiz_processing_activity.pdf, id=132, 174.6525pt x 322.20375pt>
 File: ../figures/uml_quiz_processing_activity.pdf Graphic file (type pdf)
@@ -678,7 +678,7 @@ File: ../figures/uml_quiz_processing_activity.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../figures/uml_quiz_processing_activity.pdf used on in
 put line 234.
 (pdftex.def)             Requested size: 174.65207pt x 322.20296pt.
- [37 <../figures/uml_quiz_processing_activity.pdf>]
+ [35 <../figures/uml_quiz_processing_activity.pdf>]
 <../figures/generate_quiz_sequence.pdf, id=139, 459.7175pt x 173.64874pt>
 File: ../figures/generate_quiz_sequence.pdf Graphic file (type pdf)
 
@@ -694,7 +694,7 @@ File: ../figures/upload_quiz_sequence.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../figures/upload_quiz_sequence.pdf used on input line
  276.
 (pdftex.def)             Requested size: 706.1364pt x 277.03429pt.
-) [38] [39 <../figures/generate_quiz_sequence.pdf>] [40 <../figures/upload_quiz
+) [36] [37 <../figures/generate_quiz_sequence.pdf>] [38 <../figures/upload_quiz
 _sequence.pdf>] (./chapter_3.tex
 <../figures/main_page_mockup.pdf, id=157, 940.51375pt x 653.44125pt>
 File: ../figures/main_page_mockup.pdf Graphic file (type pdf)
@@ -726,20 +726,20 @@ File: ../figures/generate_quiz_qtk.png Graphic file (type png)
 Package pdftex.def Info: ../figures/generate_quiz_qtk.png used on input line 57
 .
 (pdftex.def)             Requested size: 481.42189pt x 280.38536pt.
- [41
+ [39
 
 ]
 
-LaTeX Warning: Text page 42 contains only floats.
+LaTeX Warning: Text page 40 contains only floats.
 
 
 Overfull \vbox (4.1585pt too high) has occurred while \output is active []
 
 
-[42 <../figures/main_page_mockup.pdf> <../figures/quiz_generate_mockup.pdf>]
-(../src/new.html.haml [43 <../figures/main_page_qtk.png> <../figures/generate_q
-uiz_qtk.png>]) (../src/question.rb) (../src/students_controller.rb [44])
-(../src/create_answers.rb) [45] [46] (../src/set_header.rb) [47]
+[40 <../figures/main_page_mockup.pdf> <../figures/quiz_generate_mockup.pdf>]
+(../src/new.html.haml [41 <../figures/main_page_qtk.png> <../figures/generate_q
+uiz_qtk.png>]) (../src/question.rb) (../src/students_controller.rb [42])
+(../src/create_answers.rb) [43] [44] (../src/set_header.rb) [45]
 
 pdfTeX warning: pdflatex (file ../figures/generated_quiz.pdf): PDF inclusion: f
 ound PDF version <1.7>, but at most version <1.5> allowed
@@ -749,46 +749,46 @@ File: ../figures/generated_quiz.pdf Graphic file (type pdf)
 <use ../figures/generated_quiz.pdf>
 Package pdftex.def Info: ../figures/generated_quiz.pdf used on input line 138.
 (pdftex.def)             Requested size: 512.14963pt x 662.8211pt.
- [48 <../figures/generated_quiz.pdf>]
-(../src/scanned_quiz.rb) (../src/read_qr.rb [49]) (../src/find_marker.rb)
-[50] (../src/rotation_detection.rb) [51] (../src/answers_processing.rb)
-(../src/quiz_marking.rb [52]) (../src/perform.rb) [53]) (./chapter_4.tex
-[54
+ [46 <../figures/generated_quiz.pdf>]
+(../src/scanned_quiz.rb) (../src/read_qr.rb [47]) (../src/find_marker.rb)
+[48] (../src/rotation_detection.rb) [49] (../src/answers_processing.rb)
+(../src/quiz_marking.rb [50]) (../src/perform.rb) [51]) (./chapter_4.tex
+[52
 
 
 ]
-Underfull \hbox (badness 1939) in paragraph at lines 43--43
+Underfull \hbox (badness 1939) in paragraph at lines 44--44
 []\OT1/cmr/m/n/12 Automatically gen-er-ates quizzes
  []
 
 
-Underfull \hbox (badness 1502) in paragraph at lines 43--43
+Underfull \hbox (badness 1502) in paragraph at lines 44--44
 []\OT1/cmr/m/n/12 No need of ex-pen-sive e-testing
  []
 
 
-Underfull \hbox (badness 2376) in paragraph at lines 50--50
+Underfull \hbox (badness 2376) in paragraph at lines 51--51
 []\OT1/cmr/m/n/12 User lan-guage lim-ited (En-glish
  []
 
 
-Underfull \hbox (badness 2689) in paragraph at lines 50--50
+Underfull \hbox (badness 2689) in paragraph at lines 51--51
 []\OT1/cmr/m/n/12 Authentication (only ba-sic, no
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--50
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
 \OT1/cmr/m/n/12 Google, Face-book, LinkedIn,
  []
 
-[55] [56]
-Underfull \hbox (badness 10000) in paragraph at lines 115--115
+[53] [54]
+Underfull \hbox (badness 10000) in paragraph at lines 116--116
 []\OT1/cmr/m/n/12 Duration
  []
 
-[57] [58] [59] [60]) [61] (./conclusions.tex [62
+[55] [56] [57] [58]) [59] (./conclusions.tex [60
 
-] [63]) (./biblio.tex) [64
+] [61]) (./biblio.tex) [62
 
 
 
@@ -818,7 +818,7 @@ fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
 12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on qtk_thesis.pdf (57 pages, 2436457 bytes).
+Output written on qtk_thesis.pdf (57 pages, 2436550 bytes).
 PDF statistics:
  298 PDF objects out of 1000 (max. 8388607)
  201 compressed objects within 3 object streams

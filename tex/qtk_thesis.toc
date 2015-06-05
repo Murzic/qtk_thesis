@@ -1,45 +1,47 @@
 \thispagestyle {empty}
-\contentsline {section}{List of figures}{12}
-\contentsline {section}{List of tables}{13}
-\contentsline {section}{Listings}{14}
-\contentsline {section}{Introduction}{15}
-\contentsline {section}{\numberline {1}Domain Analysis}{17}
-\contentsline {subsection}{\numberline {1.1}Problem Definition}{17}
-\contentsline {subsection}{\numberline {1.2}REST}{17}
-\contentsline {subsection}{\numberline {1.3}Rails}{20}
-\contentsline {subsection}{\numberline {1.4}Quick Response Codes}{22}
-\contentsline {subsubsection}{\numberline {1.4.1}QR Error Correction}{22}
-\contentsline {subsubsection}{\numberline {1.4.2}QR code sizes}{22}
-\contentsline {subsection}{\numberline {1.5}Prawn}{23}
-\contentsline {subsection}{\numberline {1.6}Image Processing}{24}
-\contentsline {subsubsection}{\numberline {1.6.1}Chunky PNG}{24}
-\contentsline {subsubsection}{\numberline {1.6.2}Oily PNG}{25}
-\contentsline {subsection}{\numberline {1.7}Resque}{26}
-\contentsline {section}{\numberline {2}System Design}{29}
-\contentsline {subsection}{\numberline {2.1}Use Cases}{29}
-\contentsline {subsubsection}{\numberline {2.1.1}Use Case Actors}{29}
-\contentsline {subsubsection}{\numberline {2.1.2}Use Case Diagram}{29}
-\contentsline {subsubsection}{\numberline {2.1.3}Use Cases Description}{30}
-\contentsline {subsection}{\numberline {2.2}Class Diagrams}{33}
-\contentsline {subsection}{\numberline {2.3}Activity and State Diagrams}{36}
-\contentsline {subsection}{\numberline {2.4}Sequence Diagrams}{37}
-\contentsline {section}{\numberline {3}Implementation}{41}
-\contentsline {subsection}{\numberline {3.1}User Interface}{41}
-\contentsline {subsection}{\numberline {3.2}Quiz managing}{44}
-\contentsline {subsection}{\numberline {3.3}Quiz Generation}{45}
-\contentsline {subsection}{\numberline {3.4}Quiz Processing}{49}
-\contentsline {section}{\numberline {4}Economic Analysis}{54}
-\contentsline {subsection}{\numberline {4.1}Project Description}{54}
-\contentsline {subsection}{\numberline {4.2}SWOT Analysis}{55}
-\contentsline {subsection}{\numberline {4.3}Project time schedule}{56}
-\contentsline {subsubsection}{\numberline {4.3.1}Objectives}{56}
-\contentsline {subsubsection}{\numberline {4.3.2}Schedule}{56}
-\contentsline {subsection}{\numberline {4.4}Economical proof}{57}
-\contentsline {subsubsection}{\numberline {4.4.1}Tangible and intangible expenses}{58}
-\contentsline {subsubsection}{\numberline {4.4.2}Salary expenses}{58}
-\contentsline {subsubsection}{\numberline {4.4.3}Indirect Expenses}{59}
-\contentsline {subsubsection}{\numberline {4.4.4}Wear and Project Cost}{59}
-\contentsline {subsection}{\numberline {4.5}Management}{60}
-\contentsline {subsection}{\numberline {4.6}Economic conclusion}{61}
-\contentsline {section}{Conclusions}{62}
-\contentsline {section}{References}{64}
+\thispagestyle {empty}
+\contentsline {section}{List of figures}{10}
+\contentsline {section}{List of tables}{11}
+\contentsline {section}{Listings}{12}
+\contentsline {section}{Introduction}{13}
+\contentsline {section}{\numberline {1}Domain Analysis}{15}
+\contentsline {subsection}{\numberline {1.1}Problem Definition}{15}
+\contentsline {subsection}{\numberline {1.2}REST}{15}
+\contentsline {subsection}{\numberline {1.3}Rails}{18}
+\contentsline {subsection}{\numberline {1.4}Quick Response Codes}{20}
+\contentsline {subsubsection}{\numberline {1.4.1}QR Error Correction}{20}
+\contentsline {subsubsection}{\numberline {1.4.2}QR code sizes}{20}
+\contentsline {subsection}{\numberline {1.5}Prawn}{21}
+\contentsline {subsection}{\numberline {1.6}Image Processing}{22}
+\contentsline {subsubsection}{\numberline {1.6.1}Chunky PNG}{22}
+\contentsline {subsubsection}{\numberline {1.6.2}Oily PNG}{23}
+\contentsline {subsection}{\numberline {1.7}Resque}{24}
+\contentsline {section}{\numberline {2}System Design}{27}
+\contentsline {subsection}{\numberline {2.1}Use Cases}{27}
+\contentsline {subsubsection}{\numberline {2.1.1}Use Case Actors}{27}
+\contentsline {subsubsection}{\numberline {2.1.2}Use Case Diagram}{27}
+\contentsline {subsubsection}{\numberline {2.1.3}Use Cases Description}{28}
+\contentsline {subsection}{\numberline {2.2}Class Diagrams}{31}
+\contentsline {subsection}{\numberline {2.3}Activity and State Diagrams}{34}
+\contentsline {subsection}{\numberline {2.4}Sequence Diagrams}{35}
+\contentsline {section}{\numberline {3}Implementation}{39}
+\contentsline {subsection}{\numberline {3.1}User Interface}{39}
+\contentsline {subsection}{\numberline {3.2}Quiz managing}{42}
+\contentsline {subsection}{\numberline {3.3}Quiz Generation}{43}
+\contentsline {subsection}{\numberline {3.4}Quiz Processing}{47}
+\newpage 
+\contentsline {section}{\numberline {4}Economic Analysis}{52}
+\contentsline {subsection}{\numberline {4.1}Project Description}{52}
+\contentsline {subsection}{\numberline {4.2}SWOT Analysis}{53}
+\contentsline {subsection}{\numberline {4.3}Project time schedule}{54}
+\contentsline {subsubsection}{\numberline {4.3.1}Objectives}{54}
+\contentsline {subsubsection}{\numberline {4.3.2}Schedule}{54}
+\contentsline {subsection}{\numberline {4.4}Economical proof}{55}
+\contentsline {subsubsection}{\numberline {4.4.1}Tangible and intangible expenses}{56}
+\contentsline {subsubsection}{\numberline {4.4.2}Salary expenses}{56}
+\contentsline {subsubsection}{\numberline {4.4.3}Indirect Expenses}{57}
+\contentsline {subsubsection}{\numberline {4.4.4}Wear and Project Cost}{57}
+\contentsline {subsection}{\numberline {4.5}Management}{58}
+\contentsline {subsection}{\numberline {4.6}Economic conclusion}{59}
+\contentsline {section}{Conclusions}{60}
+\contentsline {section}{References}{62}

@@ -2,13 +2,14 @@
 \usepackage{License_style}
 
 \begin{document}
+\pagenumbering{gobble}
 \renewcommand{\labelitemi}{--}
 \renewcommand{\labelitemii}{$\bullet$}
 
 
 \numberwithin{lstlisting}{section}
 
-\setcounter{page}{8}
+
 
 \phantomsection
 %\addcontentsline{toc}{section}{SUMMARY}
@@ -24,6 +25,9 @@
 \addtocontents{toc}{\protect\thispagestyle{empty}}
 \cleardoublepage
 \newpage
+
+\pagenumbering{arabic}
+\setcounter{page}{10}
 
 \listoffigures
 \addcontentsline{toc}{section}{List of figures}
